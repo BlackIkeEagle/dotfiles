@@ -1,0 +1,54 @@
+[user]
+	name = "BlackEagle"
+	email = "ike.devolder@gmail.com"
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	reb = rebase
+	last = show --stat HEAD
+	logdel = log --diff-filter=D --summary
+	countcommits = shortlog -sn --no-merges
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	cl = "!f() { git log $1..$2 --no-merges --pretty=format:'%h|%s' | awk -F '|' '{ printf \"%s : %s\\n\", $1, $2}'; }; f"
+	clu = "!f() { git log $1..$2 --no-merges --pretty=format:'%h|%an|%s' | awk -F '|' '{ printf \"%s %-20.20s %s\\n\", $1, $2, $3 }'; }; f"
+	clh = "!f() { git log $1..$2 --no-merges --pretty=format:'%h'; }; f"
+	tl = "!f() { git tag | sort -V; }; f"
+
+[core]
+	preloadindex = 1
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	grep = yes
+
+[merge]
+	tool = vimdiff
+	log = true
+
+[push]
+	default = current
+
+[help]
+	autocorrect = 1
+
+[branch]
+	autosetuprebase = always
+
+[branch "master"]
+	remote = origin
+	merge = master
+	autosetuprebase = always
+	rebase = true
+
+[log]
+	decorate = full
+
+[diff]
+	rename = copies
+
+# vim: set ft=gitconfig noet:
