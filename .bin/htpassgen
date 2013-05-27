@@ -1,0 +1,67 @@
+#!/bin/bash
+
+function randomPassword() {
+	local length
+	local pass
+
+	if [ "$1" != "" ]; then
+		length=$1
+	else
+		length=8
+	fi
+
+	pass=</dev/urandom tr -dc A-Za-z0-9 | head -c $length
+	echo $pass
+}
+
+function generateHtpasswd() {
+	local count
+	local prefix
+	local plainfile
+	local passlength
+
+	if [ "$1" != '' ]; then
+		count=$1
+	else
+		count=10
+	fi
+	if [ "$2" != '' ]; then
+		prefix=$2
+	else
+		prefix='user'
+	fi
+	if [ "$3" != '' ]; then
+		plainfile=$3
+	else
+		plainfile='user-pass'
+	fi
+	if [ "$4" != '' ]; then
+		passlength=$4
+	else
+		passlength=8
+	fi
+
+	[ -e "$plainfile" ] && rm "$plainfile"
+	[ -e "user-htpasswd" ] && rm "user-htpasswd"
+	
+	for number in $(seq 1 $count); do
+		local username
+		local password
+
+		username="$prefix$number"
+		password=$(randomPassword $passlength)
+
+		echo "$username : $password" >> $plainfile
+		if [ -e 'user-htpasswd' ]; then
+			htpasswd -b 'user-htpasswd' "$username" "$password"
+		else
+			htpasswd -c -b 'user-htpasswd' "$username" "$password"
+		fi
+	done
+}
+
+if [ $# -eq 0 ]; then
+	echo "use: $0 <count> <prefix> <plainpassfile> <passlength>"
+else
+	generateHtpasswd "$1" "$2" "$3" "$4"
+fi
