@@ -1,0 +1,22 @@
+# Use Ctrl+J instead of Ctrl+A, which goes to the start of a line in Bash and
+# other applications that use the Readline library. (thx jmoe)
+escape ^Jj
+
+# Bind F7 and F8 for previous and next screen window.
+bindkey -k k7 prev
+bindkey -k k8 next
+
+# no startup screen.
+startup_message off
+
+# Show a window list and clock
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+
+# Don't block command output if the terminal stops responding (for example, if
+# the SSH connection times out).
+nonblock on
+
+# lets use 256 colors
+term screen-256color
