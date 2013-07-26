@@ -1,0 +1,30 @@
+#!/bin/bash
+
+[ -z "$1" ] && echo 'give a soure project at least' && exit 1;
+
+soureProject=$1
+
+if [ -z "$2" ]; then
+	targetProject="$soureProject-new"
+else
+	targetProject="$2"
+fi
+
+(
+	cd "$soureProject"
+	git archive HEAD --format=tar -o /tmp/$(basename "$soureProject")
+)
+
+[ ! -d "$targetProject" ] && mkdir -p "$targetProject"
+
+tar -xf /tmp/$(basename "$soureProject") -C "$targetProject"
+
+(
+	cd "$targetProject"
+	git init
+)
+
+rm -f /tmp/$(basename "$soureProject")
+
+echo "done"
+	
