@@ -386,7 +386,7 @@
     <SkipFileOpError>False</SkipFileOpError>
     <ShowDialogOnDragDrop>False</ShowDialogOnDragDrop>
     <OverwriteFolder>False</OverwriteFolder>
-    <ProgressKind>2</ProgressKind>
+    <ProgressKind>0</ProgressKind>
     <Confirmations>15</Confirmations>
     <Options>
       <Symlink>0</Symlink>
@@ -402,7 +402,7 @@
     </Options>
   </FileOperations>
   <Log Enabled="False">
-    <FileName></FileName>
+    <FileName/>
     <Options>255</Options>
   </Log>
   <History>
@@ -448,7 +448,7 @@
     </ShowInMenus>
   </Icons>
   <IgnoreList Enabled="False">
-    <IgnoreListFile></IgnoreListFile>
+    <IgnoreListFile/>
   </IgnoreList>
   <DirectoryHotList/>
   <Viewer>
@@ -462,7 +462,7 @@
     <PaintMode>Pen</PaintMode>
     <PaintWidth>5</PaintWidth>
     <NumberOfColumns>1</NumberOfColumns>
-    <ViewerMode>0</ViewerMode>
+    <ViewerMode>1</ViewerMode>
     <PaintColor>255</PaintColor>
     <BackgroundColor>0</BackgroundColor>
     <FontColor>16777215</FontColor>
