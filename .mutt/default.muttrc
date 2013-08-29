@@ -1,0 +1,57 @@
+# source gpg stuff
+source /etc/Muttrc.gpg.dist
+
+set charset=utf-8
+
+# colors
+source ~/.mutt/colors.solarized
+
+# global settings
+set timeout=15
+set mail_check=600
+
+set copy=no
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set move=no  #Stop asking to "move read messages to mbox"!
+
+# folder stuff
+bind editor <space> noop
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+
+# editor
+set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+
+# display stuff
+set sort=threads
+set sort_aux='last-date-received'
+
+# sidebar
+set sidebar_width=30
+set sidebar_visible=yes
+set sidebar_delim='|'
+
+# address book search
+# set query_command="~/.bin/pycarddav/pc_query -m '%s'"
+
+# which mailboxes to list in the sidebar
+mailboxes =INBOX
+
+# ctrl-n, ctrl-p to select next, prev folder
+# ctrl-o to open selected folder
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+bind index G imap-fetch-mail
+bind pager G imap-fetch-mail
+#bind index <return> display-message
+#bind pager <return> next-line
+
+macro index <Esc>m "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "mark all messages read"

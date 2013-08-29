@@ -1,0 +1,29 @@
+# my user
+set from = "nobody@example.com"
+set realname = "My Name"
+set signature = ~/.mutt/sig
+set imap_user = "nobody@example.com"
+set imap_pass = "MyFancyPassword"
+
+# imap
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Gmail]/Drafts"
+set imap_keepalive = 900
+set imap_check_subscribed=yes
+
+# smtp
+set smtp_url = "smtps://nobody@smtp.gmail.com:465/"
+set smtp_pass = "MyFancyPassword"
+
+# specify the uid to use when encrypting/signing
+set pgp_sign_as=0x13456789
+# this set the number of seconds to keep in memory the passpharse used to encrypt/sign
+# the more the less secure it will be
+set pgp_timeout=60
+# automatically sign all outcoming messages
+set crypt_autosign
+# sign only replies to signed messages
+set crypt_replysign
+
+source ~/.mutt/default.muttrc
