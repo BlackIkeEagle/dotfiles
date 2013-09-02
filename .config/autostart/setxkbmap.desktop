@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[nl]=
+Comment=
+Exec=setxkbmap be
+GenericName[nl]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[nl]=keymap-be
+Name=keymap-be
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
