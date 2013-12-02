@@ -1,0 +1,6 @@
+#!/bin/bash
+for patch in $(ls -1 *.patch | sort); do
+	git am "$patch"
+	[ $? -ne 0 ] && break
+	rm $patch
+done
