@@ -1,0 +1,5 @@
+#!/bin/bash
+(while true; do
+	echo -n "$(date +%Y%m%d\ %H%M%S);"; uptime | perl -pe 's/.*load average: (.*)/\1/' | perl -pe 's/, /;/g'
+	sleep 1
+done;) > logload.csv
