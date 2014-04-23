@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ -z $1 ]] && echo "give a title" && exit 1
+
+echo -en "\e]2;$@\a"
