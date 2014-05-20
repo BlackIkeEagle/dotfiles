@@ -2,10 +2,6 @@
 # other applications that use the Readline library. (thx jmoe)
 escape ^Jj
 
-# Bind F7 and F8 for previous and next screen window.
-bindkey -k k7 prev
-bindkey -k k8 next
-
 # no startup screen.
 startup_message off
 
