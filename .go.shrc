@@ -1,0 +1,5 @@
+# go stuff
+[[ ! -d $HOME/go ]] && mkdir $HOME/go
+export GOPATH=$HOME/go
+export GOROOT=$(go env GOROOT)
+PATH="$PATH:$GOPATH/bin"
