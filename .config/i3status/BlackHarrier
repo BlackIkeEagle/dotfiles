@@ -1,0 +1,45 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "disk /"
+order += "disk /home"
+order += "disk /mnt/data"
+order += "ethernet enp7s1"
+order += "load"
+order += "tztime local"
+
+ethernet enp7s1 {
+        # if you use %speed, i3status requires root privileges
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = "%1min %5min %15min"
+}
+
+disk "/" {
+        format = "/ %avail"
+}
+
+disk "/home" {
+        format = "/home %avail"
+}
+
+disk "/mnt/data" {
+        format = "/mnt/data %avail"
+}
