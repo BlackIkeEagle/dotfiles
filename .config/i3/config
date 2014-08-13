@@ -135,6 +135,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "$mode_system"
+# lock shortcut
+bindsym $mod+Mod1+Control+l exec --no-startup-id i3exit lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
