@@ -13,7 +13,8 @@ general {
 
 order += "disk /"
 order += "disk /home"
-order += "run_watch DHCP"
+order += "run_watch VPN20"
+order += "run_watch VPNWIMI"
 order += "wireless wlp3s0"
 order += "ethernet enp0s25"
 order += "battery 0"
@@ -35,8 +36,12 @@ battery 0 {
         format = "%status %percentage %remaining"
 }
 
-run_watch DHCP {
-        pidfile = "/var/run/dhclient*.pid"
+run_watch VPN20 {
+        pidfile = "/run/ppp1.pid"
+}
+
+run_watch VPNWIMI {
+        pidfile = "/run/openvpn@wimiprod.pid"
 }
 
 tztime local {
