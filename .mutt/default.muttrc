@@ -35,7 +35,7 @@ set sidebar_visible=yes
 set sidebar_delim='|'
 
 # address book search
-# set query_command="~/.bin/pycarddav/pc_query -m '%s'"
+set query_command = "muttvcardsearch '%s'"
 
 # which mailboxes to list in the sidebar
 mailboxes =INBOX
