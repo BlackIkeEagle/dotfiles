@@ -4,10 +4,10 @@ boot=$(grep -e '\/boot\s' /etc/mtab)
 boot_found=$?
 
 if [[ $boot_found -ne 0 ]]; then
-	echo "Please make sure /boot is mounted"
-	exit $boot_found
+	sudo mount /boot
 fi
 
+boot=$(grep -e '\/boot\s' /etc/mtab)
 boot_rw=$(echo "$boot" | grep 'rw')
 boot_rw_found=$?
 
@@ -17,3 +17,10 @@ if [[ $boot_rw_found -ne 0 ]]; then
 fi
 
 /usr/bin/pacman $@
+
+boot=$(grep -e '\/boot\s' /etc/mtab)
+boot_found=$?
+
+if [[ $boot_found -eq 0 ]]; then
+	sudo umount /boot
+fi
