@@ -1,6 +1,3 @@
-# source gpg stuff
-source /etc/Muttrc.gpg.dist
-
 set charset=utf-8
 
 # colors
