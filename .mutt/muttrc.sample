@@ -16,14 +16,19 @@ set imap_check_subscribed=yes
 set smtp_url = "smtps://nobody@smtp.gmail.com:465/"
 set smtp_pass = "MyFancyPassword"
 
+# Use GPGME
+set crypt_use_gpgme = yes
+# Sign replies to signed email
+set crypt_replysign = yes
+# Encrypt replies to encrypted email
+set crypt_replyencrypt = yes
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+# Attempt to verify email signatures automatically
+set crypt_verify_sig = yes
 # specify the uid to use when encrypting/signing
 set pgp_sign_as=0x13456789
-# this set the number of seconds to keep in memory the passpharse used to encrypt/sign
-# the more the less secure it will be
-set pgp_timeout=60
 # automatically sign all outcoming messages
-set crypt_autosign
-# sign only replies to signed messages
-set crypt_replysign
+set crypt_autosign = yes
 
 source ~/.mutt/default.muttrc
