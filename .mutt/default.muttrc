@@ -54,4 +54,5 @@ bind pager G imap-fetch-mail
 macro index <Esc>m "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "mark all messages read"
 
 # html mail !?!
+alternative_order text/plain text/html text/enriched
 auto_view text/html
