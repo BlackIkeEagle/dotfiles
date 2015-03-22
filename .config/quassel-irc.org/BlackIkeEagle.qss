@@ -1,0 +1,19 @@
+// Sender Colors
+ChatLine::sender#plain[sender="self"] { foreground: #009966; }
+
+ChatLine::sender#plain[sender="00"] { foreground: #e90d7f; }
+ChatLine::sender#plain[sender="01"] { foreground: #8e55e9; }
+ChatLine::sender#plain[sender="02"] { foreground: #b30e0e; }
+ChatLine::sender#plain[sender="03"] { foreground: #17b339; }
+ChatLine::sender#plain[sender="04"] { foreground: #58afb3; }
+ChatLine::sender#plain[sender="05"] { foreground: #9d54b3; }
+ChatLine::sender#plain[sender="06"] { foreground: #b39775; }
+ChatLine::sender#plain[sender="07"] { foreground: #3176b3; }
+ChatLine::sender#plain[sender="08"] { foreground: #e90d7f; }
+ChatLine::sender#plain[sender="09"] { foreground: #8e55e9; }
+ChatLine::sender#plain[sender="0a"] { foreground: #b30e0e; }
+ChatLine::sender#plain[sender="0b"] { foreground: #17b339; }
+ChatLine::sender#plain[sender="0c"] { foreground: #58afb3; }
+ChatLine::sender#plain[sender="0d"] { foreground: #9d54b3; }
+ChatLine::sender#plain[sender="0e"] { foreground: #b39775; }
+ChatLine::sender#plain[sender="0f"] { foreground: #3176b3; }
