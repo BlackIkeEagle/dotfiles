@@ -150,5 +150,6 @@ color body          color160        color234        "([a-z][a-z0-9+-]*://(((([a-
 #folder-hook gmail/important    "color status        J_black         color136        "
 
 # color of folders with new mail
-color sidebar_new yellow color234
+color sidebar_new   yellow          color234
+color sidebar       color241        color234
 
