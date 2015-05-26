@@ -15,6 +15,11 @@ set certificate_file=~/.mutt/certificates
 
 set move=no  #Stop asking to "move read messages to mbox"!
 
+# update progress slower
+set read_inc=500
+set write_inc=500
+set time_inc=500
+
 # folder stuff
 bind editor <space> noop
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
