@@ -1,3 +1,6 @@
+# source gpg stuff
+#source /etc/Muttrc.gpg.dist
+
 set charset=utf-8
 
 # colors
@@ -32,32 +35,34 @@ set sort=threads
 set sort_aux='last-date-received'
 
 # sidebar
-set sidebar_width=30
+set sidebar_width=35
 set sidebar_visible=yes
-set sidebar_delim='|'
+set sidebar_delim=' |'
+#set sort_sidebar=
+# simpler navigation of the sidebar
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open
 
 # address book search
 set query_command = "muttvcardsearch '%s'"
 
 # which mailboxes to list in the sidebar
-mailboxes =INBOX
+#mailboxes =INBOX
 
-# ctrl-n, ctrl-p to select next, prev folder
-# ctrl-o to open selected folder
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
-
-bind index G imap-fetch-mail
-bind pager G imap-fetch-mail
-#bind index <return> display-message
-#bind pager <return> next-line
+# vim like keybindings to navigate
+bind index gg       first-entry
+bind index G        last-entry
+bind index R        group-reply
+# vim like keybindings to read mail
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+bind pager R  group-reply
 
 macro index <Esc>m "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "mark all messages read"
 
-# html mail !?!
+# html mails !?!
 alternative_order text/plain text/html text/enriched
 auto_view text/html
