@@ -13,13 +13,13 @@ general {
 
 order += "disk /"
 order += "disk /home"
-order += "wireless wlp3s0b1"
+order += "wireless wlp3s0"
 order += "ethernet enp2s0"
 order += "battery 1"
 order += "load"
 order += "tztime local"
 
-wireless wlp3s0b1 {
+wireless wlp3s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
