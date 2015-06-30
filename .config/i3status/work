@@ -12,11 +12,10 @@ general {
 }
 
 order += "disk /"
-order += "disk /home"
-order += "run_watch VPN20"
-order += "run_watch VPNWIMI"
+order += "run_watch VPN-HOME"
+order += "run_watch VPN-WIMI"
 order += "wireless wlp3s0"
-order += "ethernet enp0s25"
+order += "ethernet ens9"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -26,7 +25,7 @@ wireless wlp3s0 {
         format_down = "W: down"
 }
 
-ethernet enp0s25 {
+ethernet ens9 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
@@ -36,11 +35,11 @@ battery 0 {
         format = "%status %percentage %remaining"
 }
 
-run_watch VPN20 {
-        pidfile = "/run/ppp1.pid"
+run_watch VPN-HOME {
+        pidfile = "/run/openvpn@home.pid"
 }
 
-run_watch VPNWIMI {
+run_watch VPN-WIMI {
         pidfile = "/run/openvpn@wimiprod.pid"
 }
 
@@ -54,8 +53,4 @@ load {
 
 disk "/" {
         format = "/ %avail"
-}
-
-disk "/home" {
-        format = "/home %avail"
 }
