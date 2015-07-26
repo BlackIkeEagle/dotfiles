@@ -181,3 +181,5 @@ bindsym $mod+Control+Right move workspace to output right
 bar {
         status_command i3status
 }
+
+exec --no-startup-id i3autostart

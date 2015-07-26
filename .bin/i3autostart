@@ -1,0 +1,3 @@
+xautolock -time 5 -locker 'i3lockscreen' &
+dunst &
+setxkbmap be &
