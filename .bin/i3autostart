@@ -2,6 +2,9 @@
 xautolock -time 5 -locker 'i3lockscreen' &
 dunst &
 setxkbmap be &
+if which start-pulseaudio-x11 > /dev/null 2>&1; then
+    start-pulseaudio-x11 &
+fi
 if which xcompmgr > /dev/null 2>&1; then
     xcompmgr -C &
 fi
