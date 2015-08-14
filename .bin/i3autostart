@@ -1,3 +1,7 @@
+#!/bin/bash
 xautolock -time 5 -locker 'i3lockscreen' &
 dunst &
 setxkbmap be &
+if which compton > /dev/null 2>&1; then
+    compton &
+fi
