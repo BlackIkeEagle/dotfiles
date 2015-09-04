@@ -8,8 +8,8 @@ urxvt.urlLauncher: opera
 urxvt.cursorBlink: true
 urxvt.geometry: 150x44
 !urxvt.fading: 15%
-urxvt.font: xft:DejaVu Sans Mono:pixelsize=12
-urxvt.boldfont: xft:DejaVu Sans Mono:bold:pixelsize=12
+urxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=12
+urxvt.boldfont: xft:DejaVu Sans Mono for Powerline:bold:pixelsize=12
 urxvt.depth: 32
 urxvt.background: rgba:0000/0000/0000/ffff
 urxvt.foreground: grey80
