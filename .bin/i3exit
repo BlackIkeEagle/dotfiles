@@ -1,4 +1,36 @@
 #!/bin/sh
+function i3_suspend {
+    if which systemctl > /dev/null 2>&1; then
+        systemctl suspend
+    else
+        sudo /usr/sbin/pm-suspend
+    fi
+}
+
+function i3_hibernate {
+    if which systemctl > /dev/null 2>&1; then
+        systemctl hibernate
+    else
+        sudo /usr/sbin/pm-hibernate
+    fi
+}
+
+function i3_reboot {
+    if which systemctl > /dev/null 2>&1; then
+        systemctl reboot
+    else
+        sudo /sbin/reboot
+    fi
+}
+
+function i3_poweroff {
+    if which systemctl > /dev/null 2>&1; then
+        systemctl poweroff
+    else
+        sudo /sbin/poweroff
+    fi
+}
+
 case "$1" in
     lock)
         xautolock -locknow
@@ -7,16 +39,16 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        xautolock -locknow && systemctl suspend
+        xautolock -locknow && i3_suspend
         ;;
     hibernate)
-        xautolock -locknow && systemctl hibernate
+        xautolock -locknow && i3_hibernate
         ;;
     reboot)
-        systemctl reboot
+        i3_reboot
         ;;
     shutdown)
-        systemctl poweroff
+        i3_poweroff
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
