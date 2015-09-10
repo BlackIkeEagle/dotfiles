@@ -190,6 +190,7 @@ bar {
 
 # special window rules
 for_window [class="SimpleScreenRecorder"] floating enable
+for_window [title="^screenkey"]             floating enable
 
 # autostart
 exec --no-startup-id i3autostart
