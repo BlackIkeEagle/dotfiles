@@ -13,6 +13,7 @@ general {
 
 order += "disk /"
 order += "run_watch VPN-HOME"
+order += "run_watch VPN-SE"
 order += "run_watch VPN-WIMI"
 order += "wireless wlp3s0"
 order += "ethernet ens9"
@@ -37,6 +38,10 @@ battery 0 {
 
 run_watch VPN-HOME {
         pidfile = "/run/openvpn@home.pid"
+}
+
+run_watch VPN-SE {
+        pidfile = "/run/openvpn@se.pid"
 }
 
 run_watch VPN-WIMI {
