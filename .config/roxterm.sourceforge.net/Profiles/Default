@@ -1,0 +1,10 @@
+[roxterm profile]
+hide_menubar=1
+always_show_tabs=0
+saturation=1,000000
+scrollbar_pos=0
+limit_scrollback=0
+scroll_on_output=1
+scroll_on_keystroke=1
+colour_scheme=Default
+term=xterm-256color
