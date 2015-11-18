@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doublecmd DCVersion="0.6.6 beta" ConfigVersion="7">
-  <Configuration Save="True" SortOrder="0">
+  <Configuration Save="False" SortOrder="0">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
   <Colors>
@@ -219,6 +219,7 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
+                  <Path>/home/ike/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -242,6 +243,7 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
+                  <Path>/home/ike/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -446,10 +448,10 @@
     <Options>255</Options>
   </Log>
   <History>
-    <SearchReplaceHistory Save="True"/>
-    <DirHistory Save="True"/>
-    <CmdLineHistory Save="True"/>
-    <FileMaskHistory Save="True"/>
+    <SearchReplaceHistory Save="False"/>
+    <DirHistory Save="False"/>
+    <CmdLineHistory Save="False"/>
+    <FileMaskHistory Save="False"/>
   </History>
   <QuickSearch>
     <MatchBeginning>True</MatchBeginning>
