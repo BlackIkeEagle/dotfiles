@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doublecmd DCVersion="0.5.6 beta">
-  <Hotkeys Version="17">
+<doublecmd DCVersion="0.6.6 beta">
+  <Hotkeys Version="20">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F1</Shortcut>
@@ -256,6 +256,14 @@
         <Command>cm_TestArchive</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+B</Shortcut>
+        <Command>cm_FlatView</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+D</Shortcut>
+        <Command>cm_ConfigDirHotList</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
@@ -331,6 +339,11 @@
         <Command>cm_TransferRight</Command>
         <Control>Files Panel</Control>
       </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Home</Shortcut>
+        <Command>cm_ChangeDirToHome</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
     </Form>
     <Form Name="Viewer">
       <Hotkey>
@@ -388,6 +401,12 @@
       <Hotkey>
         <Shortcut>F2</Shortcut>
         <Command>cm_AddToQueue</Command>
+      </Hotkey>
+    </Form>
+    <Form Name="Edit Comment Dialog">
+      <Hotkey>
+        <Shortcut>F2</Shortcut>
+        <Command>cm_SaveDescription</Command>
       </Hotkey>
     </Form>
   </Hotkeys>

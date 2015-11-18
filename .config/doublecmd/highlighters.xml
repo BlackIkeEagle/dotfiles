@@ -2,6 +2,7 @@
 <doublecmd>
   <Highlighters Version="1">
     <Highlighter Tag="0" Name="Plain text">
+      <DefaultFilter/>
       <Attribute Name="Default text">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -13,6 +14,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="C++">
+      <DefaultFilter>C++ Files (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh</DefaultFilter>
       <Attribute Name="Assembler">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -114,6 +116,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Cascading style sheets">
+      <DefaultFilter>Cascading Stylesheets (*.css)|*.css</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -188,6 +191,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Diff File">
+      <DefaultFilter/>
       <Attribute Name="Default text">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -307,11 +311,21 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="HTML document">
+      <DefaultFilter>HTML Document (*.htm,*.html)|*.htm;*.html</DefaultFilter>
       <Attribute Name="Asp">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
         <Foreground>0</Foreground>
         <Background>65535</Background>
+        <FrameColor>536870911</FrameColor>
+        <FrameStyle>0</FrameStyle>
+        <FrameEdges>1</FrameEdges>
+      </Attribute>
+      <Attribute Name="CDATA">
+        <Style>0</Style>
+        <StyleMask>0</StyleMask>
+        <Foreground>32768</Foreground>
+        <Background>536870911</Background>
         <FrameColor>536870911</FrameColor>
         <FrameStyle>0</FrameStyle>
         <FrameEdges>1</FrameEdges>
@@ -330,6 +344,15 @@
         <StyleMask>0</StyleMask>
         <Foreground>-2147483640</Foreground>
         <Background>-2147483643</Background>
+        <FrameColor>536870911</FrameColor>
+        <FrameStyle>0</FrameStyle>
+        <FrameEdges>1</FrameEdges>
+      </Attribute>
+      <Attribute Name="DOCTYPE">
+        <Style>1</Style>
+        <StyleMask>0</StyleMask>
+        <Foreground>0</Foreground>
+        <Background>65535</Background>
         <FrameColor>536870911</FrameColor>
         <FrameStyle>0</FrameStyle>
         <FrameEdges>1</FrameEdges>
@@ -408,6 +431,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="INI file">
+      <DefaultFilter>INI Files (*.ini)|*.ini</DefaultFilter>
       <Attribute Name="Comment">
         <Style>2</Style>
         <StyleMask>0</StyleMask>
@@ -491,6 +515,16 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="0" Name="Java">
+      <DefaultFilter>Java Files (*.java)|*.java</DefaultFilter>
+      <Attribute Name="Annotation">
+        <Style>0</Style>
+        <StyleMask>0</StyleMask>
+        <Foreground>536870911</Foreground>
+        <Background>536870911</Background>
+        <FrameColor>536870911</FrameColor>
+        <FrameStyle>0</FrameStyle>
+        <FrameEdges>1</FrameEdges>
+      </Attribute>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -583,6 +617,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Lazarus Form definition">
+      <DefaultFilter>Lazarus Form Files (*.lfm)|*.lfm</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -657,6 +692,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="MS-DOS batch language">
+      <DefaultFilter>MS-DOS Batch Files (*.bat;*.cmd)|*.bat;*.cmd</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -722,6 +758,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="ObjectPascal">
+      <DefaultFilter>Pascal Files (*.pas,*.dpr,*.dpk,*.inc)|*.pas;*.dpr;*.dpk;*.inc</DefaultFilter>
       <Attribute Name="Assembler">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -832,6 +869,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="PHP">
+      <DefaultFilter>PHP Files (*.php,*.php3,*.phtml,*.inc)|*.php;*.php3;*.phtml;*.inc</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -924,6 +962,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Perl">
+      <DefaultFilter>Perl Files (*.pl,*.pm,*.cgi)|*.pl;*.pm;*.cgi</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -1034,6 +1073,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Python">
+      <DefaultFilter>Python Files (*.py)|*.py</DefaultFilter>
       <Attribute Name="Comment">
         <Style>2</Style>
         <StyleMask>0</StyleMask>
@@ -1171,6 +1211,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="SQL">
+      <DefaultFilter>SQL Files (*.sql)|*.sql</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -1317,6 +1358,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="TeX">
+      <DefaultFilter>TeX Files (*.tex)|*.tex</DefaultFilter>
       <Attribute Name="Comment">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -1391,6 +1433,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="UNIX Shell Script">
+      <DefaultFilter>UNIX Shell Scripts (*.sh)|*.sh</DefaultFilter>
       <Attribute Name="Comment">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -1483,6 +1526,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="Visual Basic">
+      <DefaultFilter>Visual Basic Files (*.bas)|*.bas</DefaultFilter>
       <Attribute Name="Comment">
         <Style>1</Style>
         <StyleMask>0</StyleMask>
@@ -1557,6 +1601,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="XML document">
+      <DefaultFilter>XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd</DefaultFilter>
       <Attribute Name="Attribute Name">
         <Style>0</Style>
         <StyleMask>0</StyleMask>
@@ -1685,6 +1730,7 @@
       </Attribute>
     </Highlighter>
     <Highlighter Tag="1" Name="po language files">
+      <DefaultFilter>Po Files (*.po)|*.po</DefaultFilter>
       <Attribute Name="Comment">
         <Style>2</Style>
         <StyleMask>0</StyleMask>

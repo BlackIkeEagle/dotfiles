@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doublecmd DCVersion="0.5.6 beta" ConfigVersion="7">
-  <Configuration Save="True">
+<doublecmd DCVersion="0.6.6 beta" ConfigVersion="7">
+  <Configuration Save="True" SortOrder="0">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
   <Colors>
@@ -55,7 +55,7 @@
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>lzma</ArchiveExt>
-        <Path>%commander_path%/plugins/wcx/lzma/lzma.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>1</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
@@ -86,7 +86,7 @@
       <WcxPlugin Enabled="True">
         <ArchiveExt>cpio</ArchiveExt>
         <Path>%commander_path%/plugins/wcx/cpio/cpio.wcx</Path>
-        <Flags>0</Flags>
+        <Flags>4</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>deb</ArchiveExt>
@@ -103,16 +103,36 @@
         <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
         <Flags>68</Flags>
       </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tlz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>xz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>txz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zipx</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>84</Flags>
+      </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
       <WdxPlugin>
         <Name>rpm_wdx</Name>
-        <Path>%commander_path%/plugins/wdx/rpm_wdx/rpm_wdx.wdx</Path>
+        <Path>%COMMANDER_PATH%/plugins/wdx/rpm_wdx/rpm_wdx.wdx</Path>
         <DetectString>EXT="RPM"</DetectString>
       </WdxPlugin>
       <WdxPlugin>
         <Name>deb_wdx</Name>
-        <Path>%commander_path%/plugins/wdx/deb_wdx/deb_wdx.wdx</Path>
+        <Path>%COMMANDER_PATH%/plugins/wdx/deb_wdx/deb_wdx.wdx</Path>
         <DetectString>EXT="DEB"</DetectString>
       </WdxPlugin>
     </WdxPlugins>
@@ -129,7 +149,7 @@
     <WlxPlugins>
       <WlxPlugin Enabled="True">
         <Name>wlxMplayer</Name>
-        <Path>%commander_path%/plugins/wlx/WlxMplayer/wlxMplayer.wlx</Path>
+        <Path>%COMMANDER_PATH%/plugins/wlx/wlxmplayer/wlxmplayer.wlx</Path>
         <DetectString>(EXT="MPG")|(EXT="AVI")|(EXT="MPEG")|(EXT="FLV")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
@@ -140,52 +160,44 @@
         <Command>
           <ID>{CDEE350D-1780-4BEF-9AEC-42A5C84E2AE4}</ID>
           <Icon>view-refresh</Icon>
-          <Hint>Ververs</Hint>
           <Command>cm_Refresh</Command>
         </Command>
         <Command>
           <ID>{B313A0A3-5C74-452D-BC9E-E5C77784E7FB}</ID>
           <Icon>utilities-terminal</Icon>
-          <Hint>Run Term</Hint>
           <Command>cm_RunTerm</Command>
         </Command>
         <Command>
           <ID>{34520A2E-6150-444A-AC05-496AB7B0E50F}</ID>
           <Icon>list-add</Icon>
-          <Hint>Selecteer groep</Hint>
           <Command>cm_MarkPlus</Command>
         </Command>
         <Command>
           <ID>{1E156A0C-3CBC-43E2-80C9-92BD675F9F32}</ID>
           <Icon>list-remove</Icon>
-          <Hint>Deselecteer groep</Hint>
           <Command>cm_MarkMinus</Command>
         </Command>
         <Separator/>
         <Command>
           <ID>{11D49574-88A4-46F6-8136-F55D22C9412C}</ID>
           <Icon>package-x-generic</Icon>
-          <Hint>Inpakken bestanden...</Hint>
           <Command>cm_PackFiles</Command>
         </Command>
         <Separator/>
         <Command>
           <ID>{A21E64BA-3493-453C-B01F-F5B46D87EF10}</ID>
           <Icon>system-search</Icon>
-          <Hint>Zoeken</Hint>
           <Command>cm_Search</Command>
         </Command>
         <Separator/>
         <Command>
           <ID>{36653AC8-56A1-401D-B9E6-13AA66E82CB2}</ID>
           <Icon>go-previous</Icon>
-          <Hint>Go to previous entry in history</Hint>
           <Command>cm_ViewHistoryPrev</Command>
         </Command>
         <Command>
           <ID>{7EAD8D3B-C5E0-480B-9A0C-F9258064E475}</ID>
           <Icon>go-next</Icon>
-          <Hint>Go to next entry in history</Hint>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
       </Row>
@@ -197,6 +209,12 @@
         <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
@@ -214,6 +232,12 @@
         <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
@@ -234,26 +258,26 @@
   </Tabs>
   <MainWindow>
     <Position>
-      <Left>378</Left>
-      <Top>100</Top>
-      <Width>1182</Width>
-      <Height>835</Height>
-      <Maximized>True</Maximized>
+      <Left>0</Left>
+      <Top>18</Top>
+      <Width>1916</Width>
+      <Height>1041</Height>
+      <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
   <Language>
-    <POFileName>doublecmd.nl.po</POFileName>
+    <POFileName>doublecmd.po</POFileName>
   </Language>
   <Behaviours>
     <GoToRoot>False</GoToRoot>
-    <RunInTerminal>gnome-terminal -e </RunInTerminal>
-    <RunTerminal>gnome-terminal</RunTerminal>
+    <RunInTerminal>roxterm -e </RunInTerminal>
+    <RunTerminal>roxterm</RunTerminal>
     <OnlyOneAppInstance>True</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <MinimizeToTray>False</MinimizeToTray>
-    <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
+    <AlwaysShowTrayIcon>True</AlwaysShowTrayIcon>
     <Mouse>
       <Selection Enabled="True">
         <Button>1</Button>
@@ -263,6 +287,7 @@
     </Mouse>
     <AutoFillColumns>True</AutoFillColumns>
     <AutoSizeColumn>0</AutoSizeColumn>
+    <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
     <DateTimeFormat>dd/mm/yy</DateTimeFormat>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ShowSystemFiles>False</ShowSystemFiles>
@@ -291,6 +316,7 @@
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
+      <FramePosAfterComp>0</FramePosAfterComp>
     </Differ>
   </Tools>
   <Fonts>
@@ -330,6 +356,7 @@
       <FlatIcons>True</FlatIcons>
       <ButtonHeight>24</ButtonHeight>
       <IconSize>16</IconSize>
+      <ReportErrorWithCommands>False</ReportErrorWithCommands>
     </ButtonBar>
     <DriveBar1>False</DriveBar1>
     <DriveBar2>True</DriveBar2>
@@ -359,10 +386,14 @@
     <Sorting>
       <CaseSensitivity>0</CaseSensitivity>
       <NaturalSorting>False</NaturalSorting>
-      <SortFolderMode>0</SortFolderMode>
+      <SortFolderMode>1</SortFolderMode>
       <NewFilesPosition>2</NewFilesPosition>
       <UpdatedFilesPosition>2</UpdatedFilesPosition>
     </Sorting>
+    <ColumnsView>
+      <AutoSaveWidth>True</AutoSaveWidth>
+      <TitleStyle>1</TitleStyle>
+    </ColumnsView>
   </FilesViews>
   <Keyboard>
     <Typing>
@@ -382,11 +413,11 @@
     <ProcessComments>True</ProcessComments>
     <RenameSelOnlyName>False</RenameSelOnlyName>
     <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
-    <UseTrash>True</UseTrash>
+    <UseTrash>False</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
     <ShowDialogOnDragDrop>False</ShowDialogOnDragDrop>
     <OverwriteFolder>False</OverwriteFolder>
-    <ProgressKind>0</ProgressKind>
+    <ProgressKind>2</ProgressKind>
     <Confirmations>15</Confirmations>
     <Options>
       <Symlink>0</Symlink>
@@ -400,8 +431,17 @@
       <CopyTime>True</CopyTime>
       <CopyOwnership>True</CopyOwnership>
     </Options>
+    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
+    <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
+    <DragAndDropTextUnicodeDesireLevel>2</DragAndDropTextUnicodeDesireLevel>
+    <DragAndDropTextSimpletextDesireLevel>3</DragAndDropTextSimpletextDesireLevel>
+    <DragAndDropAskFormatEachTime>False</DragAndDropAskFormatEachTime>
+    <DragAndDropTextAutoFilename>False</DragAndDropTextAutoFilename>
+    <DragAndDropSaveUnicodeTextInUFT8>True</DragAndDropSaveUnicodeTextInUFT8>
+    <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
   </FileOperations>
-  <Log Enabled="False">
+  <Log Enabled="False" LogFileWithDateInName="False">
     <FileName/>
     <Options>255</Options>
   </Log>
@@ -425,7 +465,13 @@
     <GridHorzLine>False</GridHorzLine>
     <ShowWarningMessages>True</ShowWarningMessages>
     <SpaceMovesDown>False</SpaceMovesDown>
-    <DirBrackets>True</DirBrackets>
+    <DirBrackets>False</DirBrackets>
+    <InplaceRename>False</InplaceRename>
+    <HotDirAddTargetOrNot>False</HotDirAddTargetOrNot>
+    <HotDirFullExpandOrNot>False</HotDirFullExpandOrNot>
+    <ShowPathInPopup>False</ShowPathInPopup>
+    <ShowOnlyValidEnv>True</ShowOnlyValidEnv>
+    <WhereToAddNewHotDir>2</WhereToAddNewHotDir>
   </Miscellaneous>
   <Thumbnails Save="True">
     <Width>128</Width>
@@ -466,7 +512,7 @@
     <PaintColor>255</PaintColor>
     <BackgroundColor>0</BackgroundColor>
     <FontColor>16777215</FontColor>
-    <TextPosition>0</TextPosition>
+    <TextPosition>2</TextPosition>
   </Viewer>
   <Lua>
     <PathToLibrary>liblua5.1.so.0</PathToLibrary>
@@ -504,7 +550,7 @@
         <Column>
           <Title>Ext</Title>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>50</Width>
+          <Width>70</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -522,7 +568,7 @@
         <Column>
           <Title>Grootte</Title>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>70</Width>
+          <Width>80</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -540,7 +586,7 @@
         <Column>
           <Title>Datum</Title>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>70</Width>
+          <Width>80</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -558,7 +604,7 @@
         <Column>
           <Title>Attr</Title>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>175</Width>
+          <Width>120</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -580,4 +626,16 @@
     <LastPreset/>
     <Presets/>
   </MultiRenamePresets>
+  <SyncDirs>
+    <Subdirs>False</Subdirs>
+    <ByContent>False</ByContent>
+    <IgnoreDate>False</IgnoreDate>
+    <FilterCopyRight>True</FilterCopyRight>
+    <FilterEqual>True</FilterEqual>
+    <FilterNotEqual>True</FilterNotEqual>
+    <FilterCopyLeft>True</FilterCopyLeft>
+    <FilterDuplicates>True</FilterDuplicates>
+    <FilterSingles>True</FilterSingles>
+    <FileMask>*</FileMask>
+  </SyncDirs>
 </doublecmd>
