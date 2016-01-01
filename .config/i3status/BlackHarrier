@@ -13,7 +13,6 @@ general {
 
 order += "disk /"
 order += "disk /home"
-order += "disk /var"
 order += "ethernet enp7s1"
 order += "load"
 order += "tztime local"
@@ -38,8 +37,4 @@ disk "/" {
 
 disk "/home" {
         format = "/home %avail"
-}
-
-disk "/var" {
-        format = "/var %avail"
 }
