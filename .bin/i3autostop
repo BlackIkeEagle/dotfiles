@@ -1,0 +1,26 @@
+#!/bin/bash
+function i3_stop_suspend() {
+    echo "stop stuff on suspend"
+}
+
+function i3_stop_reboot() {
+    echo "stop stuff on reboot"
+}
+
+if [[ -z $1 ]]; then
+    target='suspend'
+else
+    target=$1
+fi
+
+case $target in
+    'suspend')
+        i3_stop_suspend
+        ;;
+    'reboot')
+        i3_stop_reboot
+        ;;
+    *)
+        echo "give suspend or reboot as target"
+        ;;
+esac

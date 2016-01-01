@@ -1,5 +1,6 @@
 #!/bin/sh
 function i3_suspend {
+    i3autostop suspend
     if which systemctl > /dev/null 2>&1; then
         systemctl suspend
     else
@@ -8,6 +9,7 @@ function i3_suspend {
 }
 
 function i3_hibernate {
+    i3autostop suspend
     if which systemctl > /dev/null 2>&1; then
         systemctl hibernate
     else
@@ -16,6 +18,7 @@ function i3_hibernate {
 }
 
 function i3_reboot {
+    i3autostop reboot
     if which systemctl > /dev/null 2>&1; then
         systemctl reboot
     else
@@ -24,6 +27,7 @@ function i3_reboot {
 }
 
 function i3_poweroff {
+    i3autostop reboot
     if which systemctl > /dev/null 2>&1; then
         systemctl poweroff
     else
