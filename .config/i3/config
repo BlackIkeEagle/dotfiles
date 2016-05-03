@@ -25,13 +25,9 @@ font pango:DejaVu Sans Mono 8
 # font, it doesn’t scale on retina/hidpi displays.
 
 # colorscheme
-set $gray1 #5a6a80
-set $gray2 #29303a
-set $gray3 #dfdfdf
-
-client.focused            $gray1   $gray1   #FFFFFF   $gray1
-client.focused_inactive   $gray2   $gray2   $gray3    $gray2
-client.unfocused          $gray2   $gray2   $gray3    $gray2
+client.unfocused #000000 #000000 #FFFFFF #000000
+client.focused_inactive #000000 #000000 #FFFFFF #000000
+client.focused #333333 #333333 #FFFFFF #333333
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -193,9 +189,10 @@ bindsym $mod+Control+Right move workspace to output right
 # finds out, if available)
 bar {
     colors {
-        focused_workspace  $gray1 $gray1 #ffffff
-        active_workspace   $gray2 $gray2 $gray3
-        inactive_workspace $gray2 $gray2 $gray3
+        statusline #AAAAAA
+        background #333333
+        focused_workspace #282828 #282828 #FFFFFF
+        inactive_workspace #333333 #333333 #AAAAAA
     }
     #mode hide
     #hidden_state hide
