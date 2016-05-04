@@ -11,3 +11,9 @@ fi
 if which udiskie > /dev/null 2>&1; then
     udiskie -t -F -A &
 fi
+if which parcellite > /dev/null 2>&1; then
+    parcellite &
+fi
+if which keepassx2 > /dev/null 2>&1; then
+    keepassx2 &
+fi
