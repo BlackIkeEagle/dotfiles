@@ -8,6 +8,9 @@ fi
 if which xcompmgr > /dev/null 2>&1; then
     xcompmgr -C &
 fi
+if which nm-applet > /dev/null 2>&1; then
+    nm-applet &
+fi
 if which udiskie > /dev/null 2>&1; then
     udiskie -t -F -A &
 fi
