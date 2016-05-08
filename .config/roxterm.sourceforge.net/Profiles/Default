@@ -8,3 +8,4 @@ scroll_on_output=1
 scroll_on_keystroke=1
 colour_scheme=Default
 term=xterm-256color
+font=DejaVu Sans Mono for Powerline 9
