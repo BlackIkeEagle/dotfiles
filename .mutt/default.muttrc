@@ -11,6 +11,7 @@ set timeout=15
 set mail_check=600
 
 set copy=no
+set mark_old=no
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
