@@ -17,7 +17,7 @@ if which udiskie > /dev/null 2>&1; then
     udiskie -t -F -A &
 fi
 if which cbatticon > /dev/null 2>&1; then
-    cbatticon &
+    cbatticon -u 120 -l 15 -n &
 fi
 if which parcellite > /dev/null 2>&1; then
     parcellite &
