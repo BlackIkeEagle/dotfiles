@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<doublecmd DCVersion="0.6.6 beta">
-  <Hotkeys Version="20">
+<doublecmd DCVersion="0.7.3 beta">
+  <Hotkeys Version="38">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F1</Shortcut>
@@ -76,7 +76,7 @@
         <Command>cm_AddPathToCmdLine</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Q</Shortcut>
+        <Shortcut>Alt+Q</Shortcut>
         <Command>cm_QuickView</Command>
       </Hotkey>
       <Hotkey>
@@ -98,10 +98,6 @@
       <Hotkey>
         <Shortcut>Ctrl+W</Shortcut>
         <Command>cm_CloseTab</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Z</Shortcut>
-        <Command>cm_EditComment</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F1</Shortcut>
@@ -204,7 +200,7 @@
         <Command>cm_OperationsViewer</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+X</Shortcut>
+        <Shortcut>Ctrl+Q</Shortcut>
         <Command>cm_Exit</Command>
       </Hotkey>
       <Hotkey>
@@ -262,6 +258,26 @@
       <Hotkey>
         <Shortcut>Ctrl+Shift+D</Shortcut>
         <Command>cm_ConfigDirHotList</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Down</Shortcut>
+        <Command>cm_ShowCmdLineHistory</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Alt+Down</Shortcut>
+        <Command>cm_DirHistory</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+O</Shortcut>
+        <Command>cm_ToggleFullscreenConsole</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+F8</Shortcut>
+        <Command>cm_TreeView</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Shift+F12</Shortcut>
+        <Command>cm_DoAnyCmCommand</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
@@ -344,6 +360,16 @@
         <Command>cm_ChangeDirToHome</Command>
         <Control>Files Panel</Control>
       </Hotkey>
+      <Hotkey>
+        <Shortcut>Shift+Tab</Shortcut>
+        <Command>cm_NextGroup</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Z</Shortcut>
+        <Command>cm_EditComment</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
     </Form>
     <Form Name="Viewer">
       <Hotkey>
@@ -385,7 +411,7 @@
         <Command>cm_LastDifference</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+X</Shortcut>
+        <Shortcut>Ctrl+Q</Shortcut>
         <Command>cm_Exit</Command>
       </Hotkey>
       <Hotkey>
