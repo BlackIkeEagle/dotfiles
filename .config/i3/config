@@ -56,7 +56,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # screenshot tool
-bindsym Print exec ksnapshot
+bindsym Print exec spectacle
 
 # kill focused window
 bindsym $mod+q kill
