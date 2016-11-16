@@ -8,6 +8,8 @@
 
 general {
         colors = true
+        color_good = "#198844"
+        color_bad = "#CC342B"
         interval = 5
 }
 
