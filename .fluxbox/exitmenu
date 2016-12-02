@@ -1,0 +1,11 @@
+# Exit menu to include
+# include this in your menu by addinng:
+# [include] (~/.fluxbox/exitmenu)
+#
+[submenu] (exit)
+      [exec] (lock) {i3exit lock}
+      [exec] (suspend) {i3exit suspend}
+      [exec] (hibernate) {i3exit hibernate}
+      [exec] (reboot) {i3exit reboot}
+      [exec] (shutdown) {i3exit shutdown}
+[end]
