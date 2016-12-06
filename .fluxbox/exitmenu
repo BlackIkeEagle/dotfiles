@@ -4,6 +4,7 @@
 #
 [submenu] (exit)
       [exec] (lock) {i3exit lock}
+      [exit] (exit)
       [exec] (suspend) {i3exit suspend}
       [exec] (hibernate) {i3exit hibernate}
       [exec] (reboot) {i3exit reboot}
