@@ -1,0 +1,19 @@
+#!/bin/bash
+
+[[ -z $1 ]] && echo "please give a desktop file" && exit 1
+
+desktopfile="$1"
+desktop=$(basename "$1")
+
+
+mimetypes=$(grep 'MimeType' "$desktopfile" | sed -e 's/^MimeType=//')
+
+IFS=$';'
+
+for mimetype in $mimetypes; do
+    echo "set $desktop as default for $mimetype? (y/n)"
+    read default
+    if [[ "y" == "$default" ]]; then
+        xdg-mime default "$desktop" "$mimetype"
+    fi
+done
