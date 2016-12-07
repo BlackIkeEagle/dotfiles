@@ -1,7 +1,18 @@
 #!/bin/sh
+dpms_off() {
+    xset dpms 0 0 0
+}
+
+dpms_on() {
+    xset dpms 5 5 5
+}
+
 if which slock > /dev/null 2>&1; then
     slock
 elif which i3lock > /dev/null 2>&1; then
-    i3lock -d -I 5 -c 000000
+    trap dpms_off SIGHUP SIGINT SIGTERM
+    dpms_on
+    i3lock -n -I 5 -c 000000
+    dpms_off
 fi
 
