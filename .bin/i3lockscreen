@@ -7,12 +7,15 @@ dpms_on() {
     xset dpms 5 5 5
 }
 
-if which slock > /dev/null 2>&1; then
-    slock
-elif which i3lock > /dev/null 2>&1; then
-    trap dpms_off SIGHUP SIGINT SIGTERM
-    dpms_on
-    i3lock -n -I 5 -c 000000
-    dpms_off
-fi
+lockscreen() {
+    if which i3lock > /dev/null 2>&1; then
+        trap dpms_off SIGHUP SIGINT SIGTERM
+        dpms_on
+        i3lock -n -I 5 -c 000000
+        dpms_off
+    elif which slock > /dev/null 2>&1; then
+        slock
+    fi
+}
 
+lockscreen
