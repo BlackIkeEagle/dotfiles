@@ -1,4 +1,9 @@
 #!/bin/sh
+function i3_exit {
+    i3autostop suspend
+    i3-msg exit
+}
+
 function i3_suspend {
     i3autostop suspend
     if which systemctl > /dev/null 2>&1; then
@@ -40,7 +45,7 @@ case "$1" in
         xautolock -locknow
         ;;
     logout)
-        i3-msg exit
+        i3_exit
         ;;
     suspend)
         xautolock -locknow && i3_suspend
