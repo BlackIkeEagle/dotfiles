@@ -64,7 +64,7 @@ Mod4 9 :Tab 9
 Mod4 t :Exec termite
 
 # open a dialog to run programs
-Mod4 r :Exec fbrun
+Mod4 r :Exec gmrun
 
 # lock the screen
 Control Mod1 Mod4 l :Exec i3exit lock
