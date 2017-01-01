@@ -1,7 +1,11 @@
 #!/bin/bash
-xautolock -time 5 -locker 'i3lockscreen' &
-dunst &
 setxkbmap be &
+if which xautolock > /dev/null 2>&1; then
+    xautolock -time 5 -locker 'i3lockscreen' &
+fi
+if which dunst > /dev/null 2>&1; then
+    dunst &
+fi
 if which compton > /dev/null 2>&1; then
     compton -C -I0 -O0 &
 elif which xcompmgr > /dev/null 2>&1; then
