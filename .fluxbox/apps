@@ -1,4 +1,4 @@
-[app] (name=fbrun)
+[app] (name=gmrun)
   [Position]	(WINCENTER)	{0 0}
   [Layer]	{2}
 [end]
