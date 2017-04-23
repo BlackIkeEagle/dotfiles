@@ -1,0 +1,74 @@
+# Show file titles (title, author, album) instead of file names.
+ReadTags = yes
+
+# Directory in which you store music files, if you specify it, you will be able
+# to quickly go to this directory with the '-m' parameter or the 'm' command.
+# This can also point to a playlist.
+MusicDir = "/home/ike/mnt/Music"
+
+# How to sort? FileName is the only option for now.
+Sort = FileName
+
+# Show errors in the streams, for example CRC errors or broken frames in mp3
+# files
+ShowStreamErrors = no
+
+# Ignore CRC errors in MP3 files. Most players do that, so the default value is
+# set to yes.
+Mp3IgnoreCRCErrors = yes
+
+# Turn on repeat.
+Repeat = no
+
+# Turn off shuffle.
+Shuffle = no
+
+# Turn on AutoNext
+AutoNext = yes
+
+# Show files with dot at the beginning?
+ShowHiddenFiles = no
+
+# Start in the music directory if no arguments are given. If set to no, start
+# in the current directory.
+StartInMusicDir = yes
+
+# Hide file name extensions
+HideFileExtension = no
+
+# Show file format in menu.
+ShowFormat = yes
+
+# Show file time in menu. Possible options: yes, no, IfAvailable - show the
+# time only when it was read before (often works faster)
+ShowTime = yes
+
+# Theme file. This can be absolute path or relative to
+# /usr/share/moc/themes/ (depends on installation prefix) or ~/.moc/themes/
+Theme = solarized
+
+# Remember the playlist after exit?
+SavePlaylist = yes
+
+# When using more than one client (interface) at a time, do the share the
+# playlist?
+SyncPlaylist = yes
+
+# Size of the in-memory cache for file tags in KB.
+TagsCacheSize = 4096
+
+# When the song changes, should the menu be scrolled so that the currently
+# played file is visible?
+FollowPlayedFile = yes
+
+# Output buffer size in kilobytes. Minimum value is 128KB. */
+OutputBuffer = 2048
+
+# Input buffer size in kilobytes. Minimum value is 32KB. */
+InputBuffer = 512
+
+# How much to fill the input buffer before playing (in kilobytes)?
+# This can't be more than InputBuffer value.
+# Remember that for network streams beside the positive effect this also causes
+# delay between what you can hear and what is broadcasted.
+Prebuffering = 64
