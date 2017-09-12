@@ -1,6 +1,9 @@
-[user]
-	name = "BlackEagle"
-	email = "ike.devolder@gmail.com"
+[include]
+	path = ~/.gitconfig-user
+
+# this will only be used on machines where I use different identities (see work)
+[includeIf "gitdir:~/github/"]
+    path = ~/.gitconfig-oss
 
 [alias]
 	st = status
@@ -10,6 +13,7 @@
 	last = show --stat HEAD
 	logdel = log --diff-filter=D --summary
 	countcommits = shortlog -sn --no-merges
+	countcommitsall = shortlog -sn
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	signlast = commit -s --amend
 	cl = "!f() { git log $1..$2 --no-merges --pretty=format:'%h|%s' | awk -F '|' '{ printf \"%s : %s\\n\", $1, $2}'; }; f"
@@ -19,6 +23,7 @@
 
 [core]
 	preloadindex = 1
+	excludesfile = ~/.gitignore-global
 
 [color]
 	branch = auto
