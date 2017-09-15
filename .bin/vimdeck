@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 ]]; then
+    echo "please pass in a presentation"; exit 1
+fi
+
+presentation="$(basename $1)"
+presentationpath="$(pwd)/$1"
+
+docker run --rm -it -e C_UID=$(id -u) -e C_GID=$(id -g) \
+    -v "$presentationpath":"/home/vimdeck/$presentation"
+    blackikeeagle/vimdeck
