@@ -1,5 +1,5 @@
 # Exit menu to include
-# include this in your menu by addinng:
+# include this in your menu by adding:
 # [include] (~/.fluxbox/exitmenu)
 #
 [submenu] (exit)
