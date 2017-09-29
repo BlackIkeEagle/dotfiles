@@ -8,5 +8,5 @@ presentation="$(basename $1)"
 presentationpath="$(pwd)/$1"
 
 docker run --rm -it -e C_UID=$(id -u) -e C_GID=$(id -g) \
-    -v "$presentationpath":"/home/vimdeck/$presentation"
+    -v "$presentationpath":"/home/vimdeck/$presentation" \
     blackikeeagle/vimdeck
