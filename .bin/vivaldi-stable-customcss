@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+sed -e '1s/^/@import url("custom.css");/' -i /opt/vivaldi/resources/vivaldi/style/common.css
+
+cat > /opt/vivaldi/resources/vivaldi/style/custom.css <<EOF
+#browser.native.linux:not(.tabs-top) div#header {
+  display: none;
+}
+EOF
