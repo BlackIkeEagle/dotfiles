@@ -17,6 +17,9 @@ fi
 if which nm-applet > /dev/null 2>&1; then
     nm-applet &
 fi
+if which blueman-applet > /dev/null 2>&1; then
+    blueman-applet &
+fi
 if which udiskie > /dev/null 2>&1; then
     udiskie -t -F -A &
 fi
