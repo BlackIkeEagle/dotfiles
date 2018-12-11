@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.8.2 beta" ConfigVersion="10">
+<doublecmd DCVersion="0.8.4 beta" ConfigVersion="10">
   <Configuration Save="False" SortOrder="0">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
@@ -37,19 +37,19 @@
     <Cursor>-2147483635</Cursor>
     <CursorText>-2147483634</CursorText>
     <UseInvertedSelection>False</UseInvertedSelection>
-    <InactivePanelBrightness>100</InactivePanelBrightness>
+    <InactivePanelBrightness>91</InactivePanelBrightness>
     <UseFrameCursor>False</UseFrameCursor>
     <FreeSpaceIndicator>
-      <ForeColor>0</ForeColor>
+      <ForeColor>-2147483646</ForeColor>
       <BackColor>16777215</BackColor>
-      <UseGradient>True</UseGradient>
+      <UseGradient>False</UseGradient>
     </FreeSpaceIndicator>
     <UseCursorBorder>False</UseCursorBorder>
     <CursorBorderColor>-2147483635</CursorBorderColor>
     <InactiveCursor>-2147483645</InactiveCursor>
     <InactiveMark>128</InactiveMark>
     <UseInactiveSelColor>False</UseInactiveSelColor>
-    <AllowOverColor>True</AllowOverColor>
+    <AllowOverColor>False</AllowOverColor>
     <gBorderFrameWidth>1</gBorderFrameWidth>
   </Colors>
   <Plugins>
@@ -294,11 +294,11 @@
     <GoToRoot>False</GoToRoot>
     <RunInTerminalStayOpenCmd>xterm</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>termite</RunInTerminalCloseCmd>
+    <RunInTerminalCloseCmd>deepin-terminal</RunInTerminalCloseCmd>
     <RunInTerminalCloseParams>-e  {command}</RunInTerminalCloseParams>
-    <JustRunTerminal>termite</JustRunTerminal>
+    <JustRunTerminal>deepin-terminal</JustRunTerminal>
     <JustRunTermParams/>
-    <OnlyOneAppInstance>True</OnlyOneAppInstance>
+    <OnlyOneAppInstance>False</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <FileSizeDigits>1</FileSizeDigits>
@@ -335,13 +335,13 @@
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
     <Editor Enabled="True">
-      <Path>qvim</Path>
+      <Path>gvim</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Editor>
     <Differ Enabled="True">
-      <Path>qvimdiff</Path>
+      <Path>gvimdiff</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
@@ -547,7 +547,7 @@
     <Items>2</Items>
   </QuickSearch>
   <QuickFilter>
-    <AutoHide>True</AutoHide>
+    <AutoHide>False</AutoHide>
     <SaveSessionModifications>False</SaveSessionModifications>
   </QuickFilter>
   <Miscellaneous>
