@@ -4,33 +4,26 @@
 # BlackEagle's vcs-status for tmux    #
 #######################################
 
-if [[ $2 -eq 1 ]]; then
-    SCMDIRTY=1
+SCMDIRTY=1
 
-    # front colors
-    COLRED='#[fg=#cc342b]'
-    COLGRN='#[fg=#198844]'
-    COLYLW='#[fg=#fba922]'
-    COLBLU='#[fg=#3971ed]'
-    COLCYN='#[fg=#39d3ed]'
+# front colors
+COLRED='#[fg=#cc342b]'
+COLGRN='#[fg=#198844]'
+COLYLW='#[fg=#fba922]'
+COLBLU='#[fg=#3971ed]'
+COLCYN='#[fg=#39d3ed]'
 
-    # border color
-    PSCOL='#[fg=#3971ed]'
-else
-    SCMDIRTY=0
-
-    # front colors
-    COLRED='#[fg=default]'
-    COLGRN='#[fg=default]'
-    COLYLW='#[fg=default]'
-    COLBLU='#[fg=default]'
-    COLCYN='#[fg=default]'
-
-    PSCOL='#[fg=default]'
-fi
+# border color
+PSCOL='#[fg=#3971ed]'
 
 function vcsstatus {
+    local active=$1
     local vcsfound=0
+
+    if [[ $active -ne 1 ]]; then
+        return;
+    fi
+
     if [[ $(id -u) != "0" ]]; then
         if [[ $vcsfound -ne 1 ]] && which git > /dev/null 2>&1; then
             if git rev-parse > /dev/null 2>&1; then
@@ -99,5 +92,5 @@ function vcsstatus {
 
 (
     cd $1
-    vcsstatus
+    vcsstatus $2
 )
