@@ -1,3 +1,4 @@
+# vim: set ft=gitconfig noet:
 [user]
 	name = "BlackEagle"
 	email = "ike.devolder@gmail.com"

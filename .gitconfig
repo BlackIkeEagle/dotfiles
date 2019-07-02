@@ -1,3 +1,4 @@
+# vim: set ft=gitconfig noet:
 [include]
 	path = ~/.gitconfig-user
 
@@ -56,5 +57,3 @@
 
 [diff]
 	rename = copies
-
-# vim: set ft=gitconfig noet:
