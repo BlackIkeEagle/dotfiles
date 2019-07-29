@@ -7,5 +7,5 @@ fi
 if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
     export SSH_ASKPASS=/usr/bin/ksshaskpass
     eval $(ssh-agent -s)
-    ssh-add
+    ssh-add &
 fi
