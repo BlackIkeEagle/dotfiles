@@ -1,3 +1,11 @@
-export QT_QPA_PLATFORMTHEME=gtk2
-export $(/usr/bin/gnome-keyring-daemon --start --components=ssh)
-export $(/usr/bin/gnome-keyring-daemon --start --components=secrets)
+if [ "$XDG_SESSION_DESKTOP" = "budgie-desktop" ] || [ "$XDG_SESSION_DESKTOP" = "deepin" ]; then
+    export QT_QPA_PLATFORMTHEME=gtk2
+    export $(/usr/bin/gnome-keyring-daemon --start --components=ssh)
+    export $(/usr/bin/gnome-keyring-daemon --start --components=secrets)
+fi
+
+if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
+    export SSH_ASKPASS=/usr/bin/ksshaskpass
+    eval $(ssh-agent -s)
+    ssh-add
+fi
