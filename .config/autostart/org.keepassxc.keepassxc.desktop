@@ -1,0 +1,27 @@
+[Desktop Entry]
+Categories=Utility;Security;Qt;
+Comment[nl_BE]=Community-driven port of the Windows application \xe2\x80\x9cKeePass Password Safe\xe2\x80\x9d
+Comment=Community-driven port of the Windows application \xe2\x80\x9cKeePass Password Safe\xe2\x80\x9d
+Exec=keepassxc %f
+GenericName[nl_BE]=Password Manager
+GenericName=Password Manager
+GenericName[de]=Passwortverwaltung
+GenericName[es]=Gestor de contrase\xc3\xb1as
+GenericName[fr]=Gestionnaire de mot de passe
+GenericName[ru]=\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb5\xd0\xb4\xd0\xb6\xd0\xb5\xd1\x80 \xd0\xbf\xd0\xb0\xd1\x80\xd0\xbe\xd0\xbb\xd0\xb5\xd0\xb9
+Icon=keepassxc
+MimeType=application/x-keepass2;
+Name[nl_BE]=KeePassXC
+Name=KeePassXC
+Path=
+StartupNotify=true
+StartupWMClass=keepassxc
+Terminal=false
+TerminalOptions=
+TryExec=keepassxc
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

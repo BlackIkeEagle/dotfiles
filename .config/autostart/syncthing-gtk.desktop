@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Network;
+Comment[nl_BE]=GUI for Syncthing
+Comment=GUI for Syncthing
+Exec=syncthing-gtk
+GenericName[nl_BE]=Syncthing GTK
+GenericName=Syncthing GTK
+Icon=syncthing-gtk
+MimeType=
+Name[nl_BE]=Syncthing GTK
+Name=Syncthing GTK
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
