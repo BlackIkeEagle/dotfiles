@@ -8,3 +8,7 @@ if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
     export SSH_ASKPASS=/usr/bin/ksshaskpass
     eval $(ssh-agent -s)
 fi
+
+if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
+    export TERMINAL=termite
+fi
