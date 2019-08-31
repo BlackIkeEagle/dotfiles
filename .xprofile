@@ -12,3 +12,9 @@ fi
 if [ "$XDG_CURRENT_DESKTOP" = "i3" ]; then
     export TERMINAL=termite
 fi
+
+if [ -d $HOME/.bin ]; then
+    if ! grep "$HOME/.bin" <<< $PATH; then
+        export PATH=$HOME/.bin:$PATH
+    fi
+fi
