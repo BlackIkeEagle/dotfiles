@@ -21,7 +21,9 @@ fi
 if which cbatticon > /dev/null 2>&1; then
     cbatticon -u 120 -l 15 -n &
 fi
-if which parcellite > /dev/null 2>&1; then
+if which copyq > /dev/null 2>&1; then
+    copyq &
+elif which parcellite > /dev/null 2>&1; then
     parcellite &
 fi
 if which usbguard-applet-qt > /dev/null 2>&1; then
