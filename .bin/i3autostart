@@ -6,11 +6,6 @@ fi
 if which dunst > /dev/null 2>&1; then
     dunst &
 fi
-if which compton > /dev/null 2>&1; then
-    compton -C -I0 -O0 &
-elif which xcompmgr > /dev/null 2>&1; then
-    xcompmgr -C &
-fi
 if which start-pulseaudio-x11 > /dev/null 2>&1; then
     start-pulseaudio-x11 &
 fi
