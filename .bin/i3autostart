@@ -26,11 +26,11 @@ if which copyq > /dev/null 2>&1; then
 elif which parcellite > /dev/null 2>&1; then
     parcellite &
 fi
+if which firewall-applet > /dev/null 2>&1; then
+    firewall-applet &
+fi
 if which usbguard-applet-qt > /dev/null 2>&1; then
     usbguard-applet-qt &
-fi
-if which QSyncthingTray > /dev/null 2>&1; then
-    QSyncthingTray &
 fi
 if which keepassxc > /dev/null 2>&1; then
     keepassxc &
