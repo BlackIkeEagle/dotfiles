@@ -57,6 +57,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # screenshot tool
 bindsym Print exec spectacle
+# passwords
+bindsym $mod+p exec keepassxc
 
 # kill focused window
 bindsym $mod+q kill
