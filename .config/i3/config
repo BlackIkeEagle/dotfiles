@@ -74,6 +74,12 @@ bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base03" -sb "$base0D" -sf "$ba
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
+## media keys
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym $mod+Shift+p  exec playerctl play-pause
+bindsym XF86AudioMute exec playerctl stop
+bindsym $mod+Shift+x  exec playerctl stop
+
 # focus urgent window
 bindsym $mod+x [urgent=latest] focus
 
