@@ -5,6 +5,9 @@
 # Copyright 2014 Andreas Guldstrand <andreas.guldstrand@gmail.com>
 #
 # Licensed under the terms of the GNU GPL v3, or any later version.
+#
+# install sysstat to have this work properly
+# `pacman -S sysstat` for example
 
 use strict;
 use warnings;
