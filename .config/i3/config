@@ -267,6 +267,7 @@ for_window [window_type="menu"] floating enable
 
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="(?i)arandr"] floating enable border normal
+for_window [class="(?i)blueman-manager"] floating enable border normal
 for_window [class="(?i)evolution-alarm-notify"] floating enable border normal
 for_window [class="(?i)keepassxc"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
