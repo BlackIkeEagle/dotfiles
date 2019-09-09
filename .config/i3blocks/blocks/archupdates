@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+updates="$(checkupdates | wc -l)"
+
+# long
+echo "$updates updates"
+
+# short
+echo "$updates updates"
