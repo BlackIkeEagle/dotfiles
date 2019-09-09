@@ -70,6 +70,10 @@ bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base03" -sb "$base0D" -sf "$ba
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# i3blocks caps / numlock
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
 # focus urgent window
 bindsym $mod+x [urgent=latest] focus
 
@@ -243,7 +247,7 @@ bar {
     #mode hide
     #hidden_state hide
     #modifier $mod
-    status_command i3status
+    status_command i3blocks
 }
 
 # special window rules
