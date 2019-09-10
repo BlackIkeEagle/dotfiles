@@ -32,6 +32,9 @@ fi
 if which usbguard-applet-qt > /dev/null 2>&1; then
     usbguard-applet-qt &
 fi
+if which redshift-gtk > /dev/null 2>&1; then
+    redshift-gtk &
+fi
 if which keepassxc > /dev/null 2>&1; then
     keepassxc &
 fi
