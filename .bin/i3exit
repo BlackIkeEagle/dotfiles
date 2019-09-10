@@ -56,10 +56,10 @@ case "$1" in
         i3_exit
         ;;
     suspend)
-        xautolock -locknow && i3_suspend
+        i3_lock && i3_suspend
         ;;
     hibernate)
-        xautolock -locknow && i3_hibernate
+        i3_lock && i3_hibernate
         ;;
     reboot)
         i3_reboot
