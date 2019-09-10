@@ -35,3 +35,6 @@ fi
 if which keepassxc > /dev/null 2>&1; then
     keepassxc &
 fi
+if which ssh-add > /dev/null 2>&1; then
+    ssh-add &
+fi
