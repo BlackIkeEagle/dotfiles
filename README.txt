@@ -6,7 +6,7 @@ The way i like them.
 ## i3 wm requirements
 
 - .config/i3
-- .config/i3status
+- .config/i3blocks
 - .config/dunst
 - .bin/i3autostart
 - .bin/i3autostop
