@@ -1,9 +1,20 @@
 #!/usr/bin/env bash
 
-updates="$(checkupdates | wc -l)"
+checkupdates=$(checkupdates)
+updates=$(echo "$checkupdates" | wc -l)
 
 # long
 echo "$updates updates"
 
 # short
 echo "$updates updates"
+
+if echo "$checkupdates" | grep "^linux\|^systemd" > /dev/null 2>&1; then
+    echo "#FF0000";
+    exit 33;
+elif [[ $updates -gt 100 ]]; then
+    echo "#FF0000";
+elif [[ $updates -gt 50 ]]; then
+    echo "#FFFC00";
+fi
+
