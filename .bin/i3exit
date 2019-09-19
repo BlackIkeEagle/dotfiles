@@ -44,7 +44,8 @@ function i3_lock {
     if which xautolock > /dev/null 2>&1; then
         xautolock -locknow
     else
-        i3lockscreen
+        i3lockscreen &
+        sleep 1
     fi
 }
 
