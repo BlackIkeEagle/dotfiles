@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 checkupdates=$(checkupdates)
-updates=$(echo "$checkupdates" | wc -l)
+if [[ "" == "$checkupdates" ]]; then
+    updates=0
+else
+    updates=$(echo "$checkupdates" | wc -l)
+fi
 
 # long
 echo "$updates updates"
