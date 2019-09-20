@@ -41,3 +41,6 @@ fi
 if which ssh-add > /dev/null 2>&1; then
     ssh-add &
 fi
+if which autostart.sh > /dev/null 2>&1; then
+    autostart.sh &
+fi
