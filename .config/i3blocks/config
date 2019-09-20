@@ -35,12 +35,12 @@ interval=3600
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
+label=MEM·
 separator=true
 interval=30
 
 [memory]
-label=SWAP
+label=SWAP·
 instance=swap
 separator=true
 interval=30
@@ -51,12 +51,12 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=root
+label=root·
 instance=/
 interval=30
 
 [disk]
-label=data
+label=data·
 instance=/media/data
 interval=30
 
@@ -65,12 +65,13 @@ interval=30
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=CPU·
 interval=10
 min_width=CPU: 100.00%
 separator=true
 
 [load_average]
+label=load·
 interval=10
 
 # Date Time
