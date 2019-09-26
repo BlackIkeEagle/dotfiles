@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+TYPE="${BLOCK_INSTANCE:-mem}"
+
+echo "$BLOCK_INSTANCE"
+echo "$BLOCK_INSTANCE"
+
+if ip a | grep -q $BLOCK_INSTANCE ; then
+    echo "#00FF00"
+else
+    echo "#333333"
+fi
