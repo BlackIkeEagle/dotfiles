@@ -55,11 +55,6 @@ label=root·
 instance=/
 interval=30
 
-[disk]
-label=data·
-instance=/media/data
-interval=30
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
@@ -74,12 +69,15 @@ separator=true
 label=load·
 interval=10
 
-# Date Time
-#
-[time]
-command=date '+%Y-%m-%d %H:%M'
+[ovpn]
+instance=ovpn-home
 separator=true
-interval=5
+interval=10
+
+[ovpn]
+instance=ovpn-combell
+separator=true
+interval=10
 
 # Key indicators
 #
@@ -96,4 +94,11 @@ signal=11
 instance=NUM
 interval=once
 signal=11
+
 #
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M'
+separator=true
+interval=5
