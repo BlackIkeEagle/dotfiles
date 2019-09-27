@@ -8,7 +8,12 @@ dpms_on() {
 }
 
 lockscreen() {
-    if which i3lock > /dev/null 2>&1; then
+    if which xsecurelock > /dev/null 2>&1; then
+        trap dpms_off SIGHUP SIGINT SIGTERM
+        dpms_on
+        xsecurelock
+        dpms_off
+    elif which i3lock > /dev/null 2>&1; then
         trap dpms_off SIGHUP SIGINT SIGTERM
         dpms_on
         i3lock -n -I 5 -c 000000
