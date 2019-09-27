@@ -3,7 +3,9 @@ setxkbmap be &
 if which compton > /dev/null 2>&1; then
     compton &
 fi
-if which xautolock > /dev/null 2>&1; then
+if which xss-lock > /dev/null 2>&1; then
+    xss-lock -l -- i3lockscreen &
+elif which xautolock > /dev/null 2>&1; then
     xautolock -time 5 -locker 'i3lockscreen' &
 fi
 if which dunst > /dev/null 2>&1; then
