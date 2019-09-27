@@ -6,7 +6,7 @@ function i3_exit {
 
 function i3_suspend {
     i3autostop suspend
-    if ! ps aux | grep -q xss-lock; then
+    if ! ps aux | grep -q '[x]ss-lock'; then
         i3_lock
     fi
     if which systemctl > /dev/null 2>&1; then
@@ -18,7 +18,7 @@ function i3_suspend {
 
 function i3_hibernate {
     i3autostop suspend
-    if ! ps aux | grep -q xss-lock; then
+    if ! ps aux | grep -q '[x]ss-lock'; then
         i3_lock
     fi
     if which systemctl > /dev/null 2>&1; then
@@ -47,9 +47,9 @@ function i3_poweroff {
 }
 
 function i3_lock {
-    if ps aux | grep -q xss-lock; then
+    if ps aux | grep -q '[x]ss-lock'; then
         xset s activate
-    elif ps aux | grep -q xautolock; then
+    elif ps aux | grep -q '[x]autolock'; then
         xautolock -locknow
     else
         i3lockscreen &
