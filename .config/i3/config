@@ -56,6 +56,7 @@ default_border pixel 1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# applications
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -291,7 +292,6 @@ for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="SimpleScreenRecorder"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
 for_window [class="Syncthing GTK"] floating enable
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable border normal
@@ -300,6 +300,7 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="smerge"] floating enable
 for_window [class="usbguard-applet-qt"] floating enable border pixel 1
 for_window [title="File Transfer*"] floating enable
+for_window [title="MultiRename"] floating enable
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [title="^screenkey"] floating enable
