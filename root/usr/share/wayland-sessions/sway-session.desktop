@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Sway Session
+Comment=SirCmpwn's Wayland window manager as a systemd service
+Exec=sway-session.sh
+Type=Application
