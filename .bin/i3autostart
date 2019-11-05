@@ -34,9 +34,6 @@ fi
 if which firewall-applet > /dev/null 2>&1; then
     firewall-applet &
 fi
-if which usbguard-applet-qt > /dev/null 2>&1; then
-    usbguard-applet-qt &
-fi
 if which redshift-gtk > /dev/null 2>&1; then
     redshift-gtk &
 fi
