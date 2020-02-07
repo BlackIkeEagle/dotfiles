@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+killall -SIGUSR1 dunst
+echo "focus on for 15 mins"
+sleep 840
+echo "one minute remaining"
+sleep 60
+killall -SIGUSR2 dunst

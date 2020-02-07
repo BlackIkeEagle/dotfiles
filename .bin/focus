@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+case $1 in
+    on)
+        killall -SIGUSR1 dunst
+        ;;
+    off)
+        killall -SIGUSR2 dunst
+        ;;
+    *)
+        echo "choose on or off"
+        ;;
+esac
