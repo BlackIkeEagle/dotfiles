@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+mins=15
+[[ -n $1 ]] && mins=$1
+
+minsminus1=$(("$mins" - 1))
+sleep1=$(("$minsminus1" * 60))
+
 killall -SIGUSR1 dunst
-echo "focus on for 15 mins"
-sleep 840
+echo "focus on for $mins mins"
+sleep $sleep1
 echo "one minute remaining"
 sleep 60
 killall -SIGUSR2 dunst
