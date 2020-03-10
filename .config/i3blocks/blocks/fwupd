@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# refresh (fwupdmgr will limit by itself)
+fwupdmgr refresh > /dev/null 2>&1
+
+fwupdates=$(
+    fwupdmgr get-updates 2>&1 \
+        | grep -civ 'has no available\|has the latest'
+)
+if [[ $fwupdates -eq 0 ]]; then
+    output="No firmware updates"
+else
+    output="$fwupdates Firmware updates"
+fi
+
+# long
+echo "$output"
+
+# short
+echo "$output"
+
+if [[ $fwupdates -eq 0 ]]; then
+    echo "#999999";
+else
+    echo "#FFFC00";
+fi
