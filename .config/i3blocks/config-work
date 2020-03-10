@@ -31,6 +31,9 @@ markup=none
 [archupdates]
 interval=3600
 
+[fwupd]
+interval=3600
+
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
