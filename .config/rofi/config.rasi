@@ -1,6 +1,6 @@
 /**
- * User: deadguy
- * Copyright: deadguy
+ * BlackIkeEagle rofi theme
+ * loosly based on Base16 Google
  */
 
 configuration {
@@ -8,16 +8,19 @@ configuration {
 	display-run:     "Execute";
 	display-window:  "Window";
 	show-icons:      true;
-	sidebar-mode:    true;
 }
 
 * {
-	background-color:            #080808;
-	text-color:                  #d3d7cf;
-	selbg:                       #215d9c;
-	actbg:                       #262626;
+	background-color:            #1d1f21;
+	text-color:                  #969896;
+    selected-text-color:         #e0e0e0;
+	selbg:                       #3971ed;
+	actbg:                       #000000;
 	urgbg:                       #e53935;
-	winbg:			     #26c6da;
+	winbg:			             #3971ed;
+    brdrbg:                      #3971ed;
+
+    font:                        "Hack 14px";
 
 	selected-normal-foreground:  @winbg;
 	normal-foreground:           @text-color;
@@ -30,9 +33,11 @@ configuration {
 	urgent-background:           @background-color;
 
 	selected-active-foreground:  @winbg;
-	active-foreground:           @text-color;
+	active-foreground:           @selected-text-color;
 	selected-active-background:  @actbg;
 	active-background:           @selbg;
+
+    border-color:                @brdrbg;
 
 	line-margin:                 2;
 	line-padding:                2;
@@ -43,12 +48,13 @@ configuration {
 }
 
 window {
-	location:	 west;
-	anchor:		 west;
-	height:		 100%;
-	width:		 22%;
-	orientation: horizontal;
-	children:	 [mainbox];
+    location:         north;
+    y-offset:         25px;
+    width:            40%;
+    background-color: @background;
+    padding:          4px;
+    border-radius:    5px;
+    border:           1px;
 }
 
 mainbox {
@@ -77,10 +83,10 @@ listview {
 element { padding: 10px; }
 
 entry {
-	expand:         false;
-	text-color:     @normal-foreground;
-	vertical-align: 1;
-	padding:        5px;
+	expand:           false;
+	text-color:       @normal-foreground;
+	vertical-align:   1;
+	padding:          5px;
 }
 
 element normal.normal {
@@ -102,7 +108,7 @@ element selected.normal {
 	background-color: @selected-normal-background;
 	text-color:       @selected-normal-foreground;
 	border:           0 5px solid 0 0;
-	border-color:	    @active-background;
+	border-color:	  @active-background;
 }
 
 element selected.urgent {
