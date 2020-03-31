@@ -304,6 +304,7 @@ for_window [class="Xfburn"] floating enable border normal
 for_window [class="copyq"] floating enable sticky enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="smerge"] floating enable
+for_window [class="SpeedCrunch"] floating enable
 for_window [class="usbguard-applet-qt"] floating enable border pixel 1
 for_window [title="File Transfer*"] floating enable
 for_window [title="MultiRename"] floating enable
