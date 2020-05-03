@@ -1,8 +1,13 @@
 #!/bin/bash
 export PATH="$HOME/.bin:$PATH"
 
-if [[ -e "$HOME/.config/autostart.sh/config" ]]; then
-    readarray COMMANDS < "$HOME/.config/autostart.sh/config"
+config="config"
+if [[ ! -z $XDG_SESSION_DESKTOP ]]; then
+    config="config-$XDG_SESSION_DESKTOP"
+fi
+
+if [[ -e "$HOME/.config/autostart.sh/$config" ]]; then
+    readarray COMMANDS < "$HOME/.config/autostart.sh/$config"
 else
     COMMANDS=()
 fi
