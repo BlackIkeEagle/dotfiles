@@ -1,5 +1,8 @@
 #!/bin/bash
 setxkbmap be &
+if [[ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]]; then
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+fi
 if which compton > /dev/null 2>&1; then
     compton &
 fi
