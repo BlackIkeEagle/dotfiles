@@ -9,7 +9,9 @@ if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
 fi
 
 if [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
-    export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
+    if [ -x /usr/lib/seahorse/ssh-askpass ]; then
+        export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
+    fi
     export TERMINAL=termite
 fi
 
