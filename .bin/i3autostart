@@ -1,6 +1,19 @@
 #!/bin/bash
 setxkbmap be &
-if [[ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]]; then
+if [[ -x /usr/lib/polkit-kde-authentication-agent-1 ]]; then
+    # pacman -S polkit-kde-agent
+    /usr/lib/polkit-kde-authentication-agent-1 &
+elif [[ -x /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 ]]; then
+    # pacman -S mate-polkit
+    /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+elif [[ -x /usr/lib/policykit-1-pantheon/io.elementary.desktop.agent-polkit ]]; then
+    # pacman -S pantheon-polkit-agent
+    /usr/lib/policykit-1-pantheon/io.elementary.desktop.agent-polkit &
+elif [[ -x /usr/bin/lxqt-policykit-agent ]]; then
+    # pacman -S lxqt-policykit
+    /usr/bin/lxqt-policykit-agent &
+elif [[ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]]; then
+    # pacman -S polkit-gnome
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fi
 if which compton > /dev/null 2>&1; then
