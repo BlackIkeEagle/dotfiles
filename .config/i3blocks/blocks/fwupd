@@ -5,12 +5,12 @@ fwupdmgr refresh > /dev/null 2>&1
 
 fwupdates=$(
     fwupdmgr get-updates 2>&1 \
-        | grep -civ 'has no available\|has the latest'
+        | grep -civ 'has no available\|has the latest\|no updatable devices'
 )
 if [[ $fwupdates -eq 0 ]]; then
     output="No firmware updates"
 else
-    output="$fwupdates Firmware updates"
+    output="Firmware updates"
 fi
 
 # long
