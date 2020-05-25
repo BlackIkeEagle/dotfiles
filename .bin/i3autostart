@@ -16,7 +16,9 @@ elif [[ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]]; then
     # pacman -S polkit-gnome
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fi
-if which compton > /dev/null 2>&1; then
+if which picom > /dev/null 2>&1; then
+    picom &
+elif which compton > /dev/null 2>&1; then
     compton &
 fi
 if which xss-lock > /dev/null 2>&1; then
