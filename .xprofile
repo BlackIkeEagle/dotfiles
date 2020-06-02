@@ -1,5 +1,5 @@
 if [ "$XDG_SESSION_DESKTOP" = "budgie-desktop" ] || [ "$XDG_SESSION_DESKTOP" = "deepin" ] || [ "$XDG_SESSION_DESKTOP" = "xfce" ] || [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
-    export QT_QPA_PLATFORMTHEME=gtk2
+    export QT_QPA_PLATFORMTHEME=gtk3
     export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11)
 fi
 
