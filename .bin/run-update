@@ -2,8 +2,6 @@
 
 set -e
 
-echo "=== Pacman cleanup ==="
-sudo pacman -Sc
 echo "=== Pacman update ==="
 sudo pacman -Suu
 echo "=== Pac DIFF ==="
