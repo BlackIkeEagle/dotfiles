@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Vivaldi
+Name=Vivaldi (snapshot)
 # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
 # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
 GenericName=Web Browser
@@ -105,13 +105,13 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=vivaldi-stable --password-store=gnome --process-per-site %U
+Exec=vivaldi-snapshot %U
 StartupNotify=true
 Terminal=false
-Icon=vivaldi
+Icon=vivaldi-snapshot
 Type=Application
 Categories=Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
 Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
@@ -166,7 +166,7 @@ Name[uk]=Нове вікно
 Name[vi]=Cửa sổ Mới
 Name[zh_CN]=新建窗口
 Name[zh_TW]=開新視窗
-Exec=vivaldi-stable --new-window
+Exec=vivaldi-snapshot --new-window
 
 [Desktop Action new-private-window]
 Name=New Private Window
@@ -190,7 +190,7 @@ Name[hi]=नई गुप्त विंडो
 Name[hr]=Novi privatni prozor
 Name[hu]=Új privát ablak
 Name[id]=Jendela Pribadi Baru
-Name[it]=Nuova finestra riservata
+Name[it]=Nuova finestra privata
 Name[iw]=חלון חדש לגלישה בסתר
 Name[ja]=新しいプライベートウィンドウ
 Name[kn]=ಹೊಸ ಖಾಸಗಿ ತೆರೆ
@@ -218,4 +218,4 @@ Name[uk]=Нове приватне вікно
 Name[vi]=Cửa sổ Riêng tư Mới
 Name[zh_CN]=新建隐私窗口
 Name[zh_TW]=新增無痕視窗
-Exec=vivaldi-stable --incognito
+Exec=vivaldi-snapshot --incognito
