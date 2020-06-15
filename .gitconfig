@@ -37,6 +37,9 @@
 	tool = vimdiff
 	log = true
 
+[pull]
+	rebase = true
+
 [push]
 	default = current
 
