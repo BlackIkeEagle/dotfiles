@@ -16,6 +16,6 @@
 #
 #xfce-mcs-manager &
 #
-~/.config/polybar/launch.sh
+~/.config/polybar/launch-box.sh
 
 i3autostart
