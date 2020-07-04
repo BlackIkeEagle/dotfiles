@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Launch Rofi
+MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i \
+<<< "  Lock|  Logout|  Suspend|  Reboot|  Shutdown")"
+case "$MENU" in
+  *Lock) i3exit lock ;;
+  *Logout) i3exit logout ;;
+  *Suspend) i3exit suspend ;;
+  *Reboot) i3exit reboot ;;
+  *Shutdown) i3exit poweroff;;
+esac
