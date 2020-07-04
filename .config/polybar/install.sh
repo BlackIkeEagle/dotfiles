@@ -10,5 +10,5 @@ if [[ ! -d ~/.local/share/fonts ]]; then
     mkdir -p ~/.local/share/fonts
 fi
 
-cp -a {config.ini,launch.sh,scripts} ~/.config/polybar/
+cp -a {*.ini,launch*.sh,scripts} ~/.config/polybar/
 cp -a fonts/* ~/.local/share/fonts/
