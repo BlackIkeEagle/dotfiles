@@ -248,23 +248,6 @@ bindsym $mod+Control+Right move workspace to output right
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    font pango:Hack 8
-    colors {
-        separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
-    }
-    #mode hide
-    #hidden_state hide
-    #modifier $mod
-    position top
-    status_command i3blocks
-}
 
 # window rules
 # hide window title
@@ -306,4 +289,5 @@ for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [title="^screenkey"] floating enable
 
 # autostart
+exec --no-startup-id $HOME/.config/polybar/launch-i3.sh
 exec --no-startup-id i3autostart
