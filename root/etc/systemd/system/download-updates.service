@@ -1,0 +1,6 @@
+[Unit]
+Description=download package updates
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pacman -Syuw --noconfirm

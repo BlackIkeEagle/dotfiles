@@ -1,0 +1,8 @@
+[Unit]
+Description=download updates for install
+
+[Timer]
+OnCalendar=Mon..Fri 12:30
+
+[Install]
+WantedBy=timers.target
