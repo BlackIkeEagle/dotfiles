@@ -105,13 +105,13 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=vivaldi-stable --password-store=gnome --process-per-site %U
+Exec=vivaldi-stable %U
 StartupNotify=true
 Terminal=false
 Icon=vivaldi
 Type=Application
 Categories=Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;
 Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
