@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+exec vivaldi-stable \
+    --user-data-dir="$HOME/.config/vivaldi-develop" \
+    "$@"
