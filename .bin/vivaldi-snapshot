@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
+password_store='--password-store=gnome'
+if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
+    password_store='--password-store=kwallet'
+fi
+
 exec /usr/bin/vivaldi-snapshot \
-    --password-store=gnome \
+    "$password_store" \
     --process-per-site \
     --disable-features=HardwareMediaKeyHandling \
     "$@"
