@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-exec /usr/bin/vivaldi-snapshot --password-store=gnome --process-per-site
+exec /usr/bin/vivaldi-snapshot \
+    --password-store=gnome \
+    --process-per-site \
+    --disable-features=HardwareMediaKeyHandling \
+    "$@"
