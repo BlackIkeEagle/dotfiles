@@ -3,7 +3,7 @@
 set -e
 
 echo "=== Pacman update ==="
-sudo pacman -Suu
+sudo pacman -Suu "$@"
 echo "=== Pac DIFF ==="
 sudo pacdiff
 if command -v vivaldi-stable-customcss > /dev/null 2>&1; then
