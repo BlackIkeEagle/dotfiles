@@ -1,0 +1,3 @@
+#browser.native.linux:not(.tabs-top) div#header {
+  display: none;
+}
