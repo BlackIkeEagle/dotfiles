@@ -6,14 +6,6 @@ echo "=== Pacman update ==="
 sudo pacman -Suu "$@"
 echo "=== Pac DIFF ==="
 sudo pacdiff
-if command -v vivaldi-stable-customcss > /dev/null 2>&1; then
-    echo "=== vivaldi-stable customisation ==="
-    sudo vivaldi-stable-customcss
-fi
-if command -v vivaldi-snapshot-customcss > /dev/null 2>&1; then
-    echo "=== vivaldi-snapshot customisation ==="
-    sudo vivaldi-snapshot-customcss
-fi
 echo "to reboot press enter"
 read -r
 reboot
