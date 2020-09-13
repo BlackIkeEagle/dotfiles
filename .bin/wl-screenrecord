@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if pgrep wf-recorder > /dev/null 2>&1; then
+    pkill -INT wf-recorder
+else
+    wf-recorder -g "$(slurp)" \
+        --file="$HOME/Downloads/screenrecording/$(date +%Y%m%d_%H%M%S)_wf-recorder.mp4"
+fi
