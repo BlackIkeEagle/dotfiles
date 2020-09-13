@@ -1,0 +1,243 @@
+/* =============================================================================
+ *
+ * Waybar styles
+ *
+ * Styles reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background-color: #282a2e;
+    color: white;
+    font-family: Hack, Noto Sans, sans-serif;
+    font-size: 12px;
+}
+
+/* Each module */
+#custom-firmware,
+#custom-updates,
+#custom-vpncombell,
+#custom-vpnhome,
+#custom-screenshot,
+#custom-screenrecorder,
+#disk,
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#custom-firmware.available {
+    color: orange;
+}
+
+#custom-updates.critical {
+    color: red;
+}
+
+#custom-updates.toomuch {
+    color: orange;
+}
+
+#custom-updates.many {
+    color: yellow;
+}
+
+#custom-updates.normal {
+    /* No styles */
+}
+
+#custom-vpncombell.connected {
+    color: green;
+}
+
+#custom-vpncombell.disconnected {
+    /* No styles */
+}
+
+#custom-vpncombell.error {
+    color: red;
+}
+
+#custom-vpnhome.connected {
+    color: green;
+}
+
+#custom-vpnhome.disconnected {
+    /* No styles */
+}
+
+#custom-vpnhome.error {
+    color: red;
+}
+
+#custom-screenrecorder.recording {
+    color: red;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#disk {
+  /* No styles */
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 2px solid white;
+    /* To compensate for the top border and still have vertical centering */
+    padding-top: 2px;
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    margin-left: 32px;
+    margin-right: 32px;
+    font-weight: bold;
+}
+
+#workspaces {
+    font-weight: bold;
+}
+
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #3971ED;
+}
+
+#workspaces button:hover {
+    color: #323232;
+    background: #3971ED;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #3971ED;
+}
+
+#workspaces button.urgent {
+    background: #373b41;
+    color: white;
+}

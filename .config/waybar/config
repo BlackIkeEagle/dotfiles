@@ -1,0 +1,185 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 24,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "custom/firmware",
+        "custom/updates",
+        "disk",
+        "memory",
+        "cpu",
+        "temperature",
+        "custom/vpncombell",
+        "custom/vpnhome",
+        "battery",
+        "custom/screenrecorder",
+        "tray",
+        "clock#date",
+        "clock#time"
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "custom/firmware": {
+        "exec": "$HOME/.config/waybar/scripts/firmware.sh",
+        "return-type": "json",
+        "interval": 120,
+        "tooltip": false,
+        "format": " {}"
+    },
+
+    "custom/updates": {
+        "exec": "$HOME/.config/waybar/scripts/updates.sh",
+        "return-type": "json",
+        "interval": 120,
+        "tooltip": false,
+        "format": " {}"
+    },
+
+    "custom/vpncombell": {
+        "exec": "$HOME/.config/waybar/scripts/customvpn.sh ovpn-combell",
+        "return-type": "json",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "custom/vpnhome": {
+        "exec": "$HOME/.config/waybar/scripts/customvpn.sh ovpn-home",
+        "return-type": "json",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "custom/screenrecorder": {
+        "exec": "$HOME/.config/waybar/scripts/screenrecorder.sh",
+        "return-type": "json",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "  {icon}  {capacity}%",
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
+    },
+
+    "clock#time": {
+        "interval": 10,
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+      "interval": 10,
+      "format": "  {:%e %b %Y}",
+      "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "custom/keyboard-layout": {
+      "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+      // Interval set only as a fallback, as the value is updated by signal
+      "interval": 30,
+      "format": "  {}", // Icon: keyboard
+      // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+      "signal": 1, // SIGHUP
+      "tooltip": false
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {used:0.1f}GiB",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "  {used} / {total}",
+        "path": "/"
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 80
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+    "temperature": {
+      "critical-threshold": 80,
+      "interval": 5,
+      "format": "{icon}  {temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }
+}
