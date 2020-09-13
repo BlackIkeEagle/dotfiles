@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 4
 if which mako > /dev/null 2>&1; then
     mako &
 fi
@@ -6,31 +7,28 @@ if which start-pulseaudio-x11 > /dev/null 2>&1; then
     start-pulseaudio-x11 &
 fi
 if which nm-applet > /dev/null 2>&1; then
-    nm-applet &
+    nm-applet --indicator &
 fi
-if which blueman-applet > /dev/null 2>&1; then
-    blueman-applet &
-fi
-if which udiskie > /dev/null 2>&1; then
-    udiskie -t -F -A &
-fi
-if which cbatticon > /dev/null 2>&1; then
-    cbatticon -u 120 -l 15 -n &
-fi
-if which copyq > /dev/null 2>&1; then
-    copyq &
-elif which parcellite > /dev/null 2>&1; then
-    parcellite &
-fi
-if which firewall-applet > /dev/null 2>&1; then
-    firewall-applet &
-fi
+#if which blueman-applet > /dev/null 2>&1; then
+    #blueman-applet &
+#fi
+#if which udiskie > /dev/null 2>&1; then
+    #udiskie -t -F -A &
+#fi
+#if which copyq > /dev/null 2>&1; then
+    #copyq &
+#elif which parcellite > /dev/null 2>&1; then
+    #parcellite &
+#fi
+#if which firewall-applet > /dev/null 2>&1; then
+    #firewall-applet &
+#fi
 if which keepassxc > /dev/null 2>&1; then
     keepassxc &
 fi
 if which ssh-add > /dev/null 2>&1; then
     ssh-add &
 fi
-#if which autostart.sh > /dev/null 2>&1; then
-    #autostart.sh &
-#fi
+if which autostart.sh > /dev/null 2>&1; then
+    autostart.sh &
+fi
