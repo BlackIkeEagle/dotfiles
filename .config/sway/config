@@ -65,7 +65,7 @@ input "1241:267:USB_Keyboard" {
 #
 # Font configuration
 #
-font pango:Hack 8
+font pango:Hack 0
 
 #
 # Colors configuration
@@ -99,6 +99,8 @@ client.urgent $base02 $base08 $base07 $base08 $base08
 # default window / border style
 hide_edge_borders none
 default_border pixel 1
+titlebar_border_thickness 0
+titlebar_padding 2 2
 
 ### Key bindings
 #
@@ -125,6 +127,7 @@ default_border pixel 1
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -162,7 +165,7 @@ default_border pixel 1
     bindsym $mod+parenleft workspace 5
     bindsym $mod+section workspace 6
     bindsym $mod+egrave workspace 7
-    bindsym $mod+underscore workspace 8
+    bindsym $mod+exclam workspace 8
     bindsym $mod+ccedilla workspace 9
     bindsym $mod+agrave workspace 10
     # Move focused container to workspace
@@ -178,6 +181,19 @@ default_border pixel 1
     bindsym $mod+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    # move workspaces
+    bindsym $mod+Control+h move workspace to output left
+    bindsym $mod+Control+j move workspace to output down
+    bindsym $mod+Control+k move workspace to output up
+    bindsym $mod+Control+l move workspace to output right
+
+    # move workspaces with arrow keys
+    bindsym $mod+Control+Left move workspace to output left
+    bindsym $mod+Control+Down move workspace to output down
+    bindsym $mod+Control+Up move workspace to output up
+    bindsym $mod+Control+Right move workspace to output right
+
 #
 # Layout stuff:
 #
@@ -266,19 +282,23 @@ bindsym $mod+m mode "move" focus floating
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    colors {
-        separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
-    }
-    position top
+#bar {
+    #font pango:Hack 8
+    #colors {
+        #separator $base03
+        #background $base01
+        #statusline $base05
+        #focused_workspace $base0C $base0D $base00
+        #active_workspace $base02 $base02 $base07
+        #inactive_workspace $base01 $base01 $base03
+        #urgent_workspace $base08 $base08 $base07
+    #}
+    #position top
 
-    status_command i3blocks
+    #status_command i3blocks
+#}
+bar {
+    swaybar_command waybar
 }
 
 #
@@ -288,9 +308,11 @@ bar {
 # lock screen
 bindsym $mod+Mod1+Control+l exec --no-startup-id swaylockscreen
 # screenshot tool
-bindsym Print exec spectacle
+bindsym Print exec --no-startup-id wl-screenshot
+# screenrecord
+bindsym $mod+Control+r exec --no-startup-id wl-screenrecord
 # passwords
-bindsym $mod+p exec keepassxc
+bindsym $mod+p exec bitwarden
 
 ## media keys
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -311,12 +333,13 @@ for_window [class="(?i)blueman-manager"] floating enable
 for_window [class="(?i)evolution-alarm-notify"] floating enable
 for_window [app_id="(?i)keepassxc"] floating enable
 for_window [class="(?i)virtualbox"] floating enable
-for_window [class="GParted"] floating enable
-for_window [class="Lightdm-settings"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [class="Pavucontrol"] floating enable
+for_window [class="(?i)GParted"] floating enable
+for_window [class="(?i)Lightdm-settings"] floating enable
+for_window [class="(?i)Lxappearance"] floating enable
+for_window [class="(?i)Pavucontrol"] floating enable
 for_window [class="Simple-scan"] floating enable
-for_window [class="Syncthing GTK"] floating enable
+for_window [class="(?i)Syncthing GTK"] floating enable
+for_window [class="(?i)SpeedCrunch"] floating enable
 for_window [class="Xfburn"] floating enable
 for_window [class="copyq"] floating enable
 for_window [instance="usbguard-applet-qt"] floating enable
