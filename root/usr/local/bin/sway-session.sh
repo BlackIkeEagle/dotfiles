@@ -3,8 +3,9 @@
 # first import environment variables from the login manager
 #systemctl --user import-environment
 
-if [ -e $HOME/.config/sway/envvars.sh ]; then
-    . $HOME/.config/sway/envvars.sh
+# shellcheck disable=SC1090
+if [ -e "$HOME/.config/sway/envvars.sh" ]; then
+    . "$HOME/.config/sway/envvars.sh"
 fi
 
 # then start the service
