@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+function sway_exit {
+    swayautostop suspend
+    swaymsg exit
+}
+
+function sway_suspend {
+    swayautostop suspend
+    if which systemctl > /dev/null 2>&1; then
+        systemctl suspend
+    else
+        sudo /usr/sbin/pm-suspend
+    fi
+}
+
+function sway_hibernate {
+    swayautostop suspend
+    if which systemctl > /dev/null 2>&1; then
+        systemctl hibernate
+    else
+        sudo /usr/sbin/pm-hibernate
+    fi
+}
+
+function sway_reboot {
+    swayautostop reboot
+    if which systemctl > /dev/null 2>&1; then
+        systemctl reboot
+    else
+        sudo /sbin/reboot
+    fi
+}
+
+function sway_poweroff {
+    swayautostop reboot
+    if which systemctl > /dev/null 2>&1; then
+        systemctl poweroff
+    else
+        sudo /sbin/poweroff
+    fi
+}
+
+function sway_lock {
+    if pgrep swayidle > /dev/null 2>&1; then
+        pkill -USR1 swayidle
+    else
+        swaylockscreen &
+        sleep 1
+    fi
+}
+
+case "$1" in
+    lock)
+        sway_lock
+        ;;
+    logout)
+        sway_exit
+        ;;
+    suspend)
+        sway_suspend
+        ;;
+    hibernate)
+        sway_hibernate
+        ;;
+    reboot)
+        sway_reboot
+        ;;
+    shutdown)
+        sway_poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
