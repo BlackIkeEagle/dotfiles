@@ -1,4 +1,4 @@
-if [ "$XDG_SESSION_DESKTOP" = "budgie-desktop" ] || [ "$XDG_SESSION_DESKTOP" = "deepin" ] || [ "$XDG_SESSION_DESKTOP" = "xfce" ] || [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
+if [ "$XDG_SESSION_DESKTOP" = "budgie-desktop" ] || [ "$XDG_SESSION_DESKTOP" = "deepin" ] || [ "$XDG_SESSION_DESKTOP" = "xfce" ] || [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "sway" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
     export QT_QPA_PLATFORMTHEME=gtk3
     export $(/usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11)
 fi
@@ -8,11 +8,16 @@ if [ "$XDG_SESSION_DESKTOP" = "KDE" ]; then
     eval $(ssh-agent -s)
 fi
 
-if [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
+if [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "sway" ] || [ "$XDG_SESSION_DESKTOP" = "fluxbox" ] || [ "$XDG_SESSION_DESKTOP" = "blackbox" ]; then
     if [ -x /usr/lib/seahorse/ssh-askpass ]; then
         export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
     fi
     export TERMINAL=termite
+fi
+
+if [ "$XDG_SESSION_DESKTOP" = "sway" ]; then
+    export QT_QPA_PLATFORM=wayland
+    export GRIM_DEFAULT_DIR="$HOME/Downloads/screenshots"
 fi
 
 if [ -d $HOME/.bin ]; then
