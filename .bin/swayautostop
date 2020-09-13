@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+function sway_stop_suspend() {
+    echo "stop stuff on suspend"
+}
+
+function sway_stop_reboot() {
+    echo "stop stuff on reboot"
+}
+
+if [[ -z $1 ]]; then
+    target='suspend'
+else
+    target=$1
+fi
+
+case $target in
+    'suspend')
+        sway_stop_suspend
+        ;;
+    'reboot')
+        sway_stop_reboot
+        ;;
+    *)
+        echo "give suspend or reboot as target"
+        ;;
+esac
