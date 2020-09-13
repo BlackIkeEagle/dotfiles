@@ -2,7 +2,7 @@
 export PATH="$HOME/.bin:$PATH"
 
 config="config"
-if [[ ! -z $XDG_SESSION_DESKTOP ]]; then
+if [[ -n $XDG_SESSION_DESKTOP ]]; then
     config="config-$XDG_SESSION_DESKTOP"
 fi
 
@@ -23,6 +23,7 @@ function run {
 	oldIFS=$IFS
 	IFS=$'\n'
 	(
+        # shellcheck disable=SC2068
 		for cmd in ${COMMANDS[@]}; do
             if [[ $cmd == sleep* ]]; then
                 eval "${cmd}"
