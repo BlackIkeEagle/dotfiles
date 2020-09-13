@@ -126,7 +126,8 @@ titlebar_padding 2 2
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec --no-startup-id powermenu
 
 #
 # Moving around:
@@ -306,7 +307,7 @@ bar {
 #
 
 # lock screen
-bindsym $mod+Mod1+Control+l exec --no-startup-id swaylockscreen
+bindsym $mod+Mod1+Control+l exec --no-startup-id swayexit lock
 # screenshot tool
 bindsym Print exec --no-startup-id wl-screenshot
 # screenrecord
