@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# export GRIM_DEFAULT_DIR="$HOME/Downloads/screenshots" if needed
+
+grim -g "$(slurp)"
