@@ -1,12 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+exitcmd="i3exit"
+if [ "$XDG_SESSION_DESKTOP" = "i3" ]; then
+    exitcmd="i3exit"
+elif [ "$XDG_SESSION_DESKTOP" = "sway" ]; then
+    exitcmd="swayexit"
+fi
 
 # Launch Rofi
 MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i \
 <<< "  Lock|  Logout|  Suspend|  Reboot|  Shutdown")"
 case "$MENU" in
-  *Lock) i3exit lock ;;
-  *Logout) i3exit logout ;;
-  *Suspend) i3exit suspend ;;
-  *Reboot) i3exit reboot ;;
-  *Shutdown) i3exit poweroff;;
+  *Lock) $exitcmd lock ;;
+  *Logout) $exitcmd logout ;;
+  *Suspend) $exitcmd suspend ;;
+  *Reboot) $exitcmd reboot ;;
+  *Shutdown) $exitcmd poweroff;;
 esac
