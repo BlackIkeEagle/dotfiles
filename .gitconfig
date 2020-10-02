@@ -55,6 +55,12 @@
 	autosetuprebase = always
 	rebase = true
 
+[branch "main"]
+	remote = origin
+	merge = main
+	autosetuprebase = always
+	rebase = true
+
 [log]
 	decorate = full
 
