@@ -23,44 +23,51 @@ cursor_shape = block
 filter_unmatched_urls = true
 
 [colors]
-# goto http://terminal.sexy/ for other colors
+# Base16 Google Light
+# Author: Seth Wright (http://sethawright.com)
 
-# special
-foreground      = #c5c8c6
-foreground_bold = #c5c8c6
-cursor          = #c5c8c6
-background      = #1d1f21
+foreground          = #373b41
+foreground_bold     = #373b41
+cursor              = #373b41
+cursor_foreground   = #ffffff
+background          = #ffffff
 
-# black
-color0  = #1d1f21
-color8  = #969896
+# 16 color space
 
-# red
-color1  = #cc342b
-color9  = #cc342b
+# Black, Gray, Silver, White
+color0  = #ffffff
+color8  = #b4b7b4
+color7  = #373b41
+color15 = #1d1f21
 
-# green
+# Red
+color1  = #CC342B
+color9  = #CC342B
+
+# Green
 color2  = #198844
 color10 = #198844
 
-# yellow
-color3  = #fba922
-color11 = #fba922
+# Yellow
+color3  = #FBA922
+color11 = #FBA922
 
-# blue
-color4  = #3971ed
-color12 = #3971ed
+# Blue
+color4  = #3971ED
+color12 = #3971ED
 
-# magenta
-color5  = #a36ac7
-color13 = #a36ac7
+# Purple
+color5  = #A36AC7
+color13 = #A36AC7
 
-# cyan
-color6  = #3971ed
-color14 = #3971ed
+# Teal
+color6  = #3971ED
+color14 = #3971ED
 
-# white
-color7  = #c5c8c6
-color15 = #ffffff
-
-# vim: ft=dosini cms=#%s
+# Extra colors
+color16 = #F96A38
+color17 = #3971ED
+color18 = #e0e0e0
+color19 = #c5c8c6
+color20 = #969896
+color21 = #282a2e
