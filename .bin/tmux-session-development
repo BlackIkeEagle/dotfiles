@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+session_name="develop"
+if [[ -n "$1" ]]; then
+    session_name="$1"
+fi
+
+tmux has-session -t "$session_name"
+if [[ $? -ne 0 ]]; then
+    exec tmux new -s "$session_name"
+else
+    exec tmux a -t "$session_name"
+fi

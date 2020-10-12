@@ -1,0 +1,17 @@
+# assuming the use of bash or zsh
+
+if [[ -z "$TMUX" ]]; then
+    echo "you must run this inside a tmux session" >&2
+    exit 1
+fi
+
+if [[ -n "$1" ]]; then
+    cd "$1"
+    tmux rename-window "$1"
+fi
+
+tmux split-pane -h vim
+tmux split-pane -h
+tmux resize-pane -x 80
+tmux select-pane -t-1
+tmux kill-pane -t-1
