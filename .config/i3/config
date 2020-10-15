@@ -290,5 +290,5 @@ for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [title="^screenkey"] floating enable
 
 # autostart
-exec --no-startup-id $HOME/.config/polybar/launch-i3.sh
 exec --no-startup-id i3autostart
+exec --no-startup-id $HOME/.config/polybar/launch-i3.sh
