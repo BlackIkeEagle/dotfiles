@@ -64,7 +64,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # screenshot tool
 bindsym Print exec spectacle
 # passwords
-bindsym $mod+p exec keepassxc
+bindsym $mod+p exec bitwarden
 
 # kill focused window
 bindsym $mod+q kill
@@ -267,6 +267,7 @@ for_window [class="(?i)arandr"] floating enable border normal
 for_window [class="(?i)blueman-manager"] floating enable border normal
 for_window [class="(?i)evolution-alarm-notify"] floating enable border normal
 for_window [class="(?i)keepassxc"] floating enable border normal
+for_window [class="(?i)bitwarden"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="GParted"] floating enable border normal
 for_window [class="Lightdm-settings"] floating enable border normal
