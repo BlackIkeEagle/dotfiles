@@ -77,6 +77,8 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # start rofi
 bindsym $mod+d exec "rofi -combi-modi window,drun,run -show combi -modi combi"
+# rofimoji
+bindsym $mod+i exec "rofimoji"
 
 # i3blocks caps / numlock
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
