@@ -385,9 +385,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>keepassxc</name>
+          <name>bitwarden</name>
         </startupnotify>
-        <command>keepassxc</command>
+        <command>bitwarden</command>
       </action>
     </keybind>
   </keyboard>
