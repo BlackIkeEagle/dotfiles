@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+uid=$(id -u)
+gid=$(id -g)
+
+docker pull docker.io/blackikeeagle/archlinux-build
+docker run --rm -it \
+    -v "$(pwd)":/build \
+    -v /etc/pacman.conf:/etc/pacman.conf \
+    docker.io/blackikeeagle/archlinux-build \
+    bash -c "sudo pacman -Sy && sudo chown archbuild: -R /build && cd /build && makepkg --syncdeps --noconfirm $*"
+docker run --rm -it \
+    -v "$(pwd)":/build \
+    -v /etc/pacman.conf:/etc/pacman.conf \
+    docker.io/blackikeeagle/archlinux-build \
+    bash -c "sudo chown $uid:$gid -R /build"
