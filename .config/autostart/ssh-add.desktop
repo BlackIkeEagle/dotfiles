@@ -1,9 +1,9 @@
 [Desktop Entry]
-Comment[en_US]=
-Comment=
+Comment[en_US]=ssh-add
+Comment=ssh-add
 Exec=ssh-add
-GenericName[en_US]=
-GenericName=
+GenericName[en_US]=ssh-add
+GenericName=ssh-add
 Icon=system-run
 MimeType=
 Name[en_US]=
