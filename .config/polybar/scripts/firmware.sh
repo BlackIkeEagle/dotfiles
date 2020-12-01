@@ -8,9 +8,9 @@ while true; do
 
     fwupdates=$(
         fwupdmgr get-updates 2>&1 \
-            | grep -civ 'has no available\|has the latest\|no updatable devices'
+            | grep -ci 'No updates available for remaining devices'
     )
-    if [[ $fwupdates -eq 0 ]]; then
+    if [[ $fwupdates -eq 1 ]]; then
         output="$BAR_ICON No"
     else
         output="%{F#e53935}$BAR_ICON Yes%{F-}"
