@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+    GDK_BACKEND=x11 /usr/bin/remmina-file-wrapper
+else
+    /usr/bin/remmina-file-wrapper
+fi
