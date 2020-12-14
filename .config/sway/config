@@ -310,6 +310,8 @@ bar {
 
 # lock screen
 bindsym $mod+Mod1+Control+l exec --no-startup-id swayexit lock
+# clipboard
+bindsym Control+Mod1+h exec --no-startup-id clipman --histpath="~/.local/share/clipman-primary.json" pick --tool rofi
 # screenshot tool
 bindsym Print exec --no-startup-id wl-screenshot
 # screenrecord
