@@ -23,6 +23,12 @@ if which swayidle > /dev/null 2>&1; then
             resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -c 000000' &
 fi
+if which wl-paste && which clipman; then
+    wl-paste -p -t text --watch \
+        clipman store -P \
+        --max-items=0 \
+        --histpath="~/.local/share/clipman-primary.json" &
+fi
 if which mako > /dev/null 2>&1; then
     mako &
 fi
