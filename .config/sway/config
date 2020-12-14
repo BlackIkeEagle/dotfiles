@@ -114,6 +114,8 @@ titlebar_padding 2 2
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    # rofimoji
+    bindsym $mod+i exec "rofimoji"
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
