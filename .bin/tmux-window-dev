@@ -7,7 +7,11 @@ fi
 
 if [[ -n "$1" ]]; then
     cd "$1"
-    tmux rename-window "$1"
+    if [[ "." == "$1" ]]; then
+        tmux rename-window "$(basename $PWD)"
+    else
+        tmux rename-window "$1"
+    fi
 fi
 
 tmux split-pane -h vim
