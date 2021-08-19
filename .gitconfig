@@ -26,6 +26,9 @@
 	preloadindex = 1
 	excludesfile = ~/.gitignore-global
 
+[init]
+	defaultBranch = main
+
 [color]
 	branch = auto
 	diff = auto
