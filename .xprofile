@@ -12,7 +12,7 @@ if [ "$XDG_SESSION_DESKTOP" = "i3" ] || [ "$XDG_SESSION_DESKTOP" = "sway" ] || [
     if [ -x /usr/lib/seahorse/ssh-askpass ]; then
         export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
     fi
-    export TERMINAL=termite
+    export TERMINAL=konsole
 fi
 
 if [ "$XDG_SESSION_DESKTOP" = "sway" ]; then

@@ -292,11 +292,11 @@
   </Language>
   <Behaviours>
     <GoToRoot>False</GoToRoot>
-    <RunInTerminalStayOpenCmd>xterm</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenCmd>konsole</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
-    <RunInTerminalCloseCmd>deepin-terminal</RunInTerminalCloseCmd>
+    <RunInTerminalCloseCmd>konsole</RunInTerminalCloseCmd>
     <RunInTerminalCloseParams>-e  {command}</RunInTerminalCloseParams>
-    <JustRunTerminal>deepin-terminal</JustRunTerminal>
+    <JustRunTerminal>konsole</JustRunTerminal>
     <JustRunTermParams/>
     <OnlyOneAppInstance>False</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
