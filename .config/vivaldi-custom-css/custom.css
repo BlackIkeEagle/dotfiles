@@ -1,11 +1,19 @@
-#browser.native.linux:not(.tabs-top) #header {
+#browser:not(.tabs-top) #header {
   min-height: 0;
 }
 
-#browser.native.linux:not(.tabs-top) .UrlBar {
+#browser:not(.tabs-top) .UrlBar {
   padding-left: 30px;
 }
 
-#browser.native.linux:not(.tabs-top) button.vivaldi {
+#browser:not(.native):not(.tabs-top) .UrlBar {
+  padding-right: 90px;
+}
+
+#browser:not(.tabs-top) #titlebar button.vivaldi {
   padding-top: 5px;
+}
+
+#browser:not(.tabs-top) #titlebar .window-buttongroup {
+  padding-top: 2px;
 }
