@@ -2,6 +2,10 @@
   min-height: 0;
 }
 
+#browser.native:not(.tabs-top) #header {
+  min-height: 0;
+}
+
 #browser:not(.tabs-top) .UrlBar {
   padding-left: 30px;
 }
