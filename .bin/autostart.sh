@@ -15,7 +15,7 @@ fi
 function run {
     local connected=1
     while [[ 0 -ne $connected ]]; do
-        ping -c1 herecura.eu
+        ping -c1 -W1 herecura.eu
         connected=$?
         sleep 1
     done
@@ -36,4 +36,5 @@ function run {
 	IFS=$oldIFS
 }
 
-run &
+cd "$HOME" || exit 1
+run
