@@ -6,11 +6,15 @@
   min-height: 0;
 }
 
-#browser:not(.tabs-top) .UrlBar {
-  padding-left: 30px;
+#browser:not(.tabs-top) #header #pagetitle {
+  display: none;
 }
 
-#browser:not(.native):not(.tabs-top) .UrlBar {
+#browser:not(.tabs-top) #main div.mainbar {
+  padding-left: 35px;
+}
+
+#browser:not(.native):not(.tabs-top) #main div.mainbar {
   padding-right: 90px;
 }
 
